@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>document</title>
+    <!--selector:psuedo-class{
+    property:value-->
+    <!--psuedo-class is applies styles on the different state of a specific elements(htmal tags)-->
+    <style>
+        a:link{
+            color: black;
+            font-style:italic ;
+        }
+        a:visited{
+            color: aquamarine;
+        }
+        a:hover{
+            color: rgb(166, 255, 0);
+            font-size:30px;
+        }
+a:active{
+    color: red;
+}
+div{
+    height: 200px;
+    width: 300px;
+    background-color: rgb(224, 172, 103);
+}/*
+div:hover{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(216, 25, 114, 0.123);
+}*/
+.inpu{
+    background-color: rgb(251, 255, 0);
+    width: 200px;
+    height: 40px;
+    border: 2px;color: rgb(235, 51, 51);
+}
+input:focus{
+    background-color: blueviolet;
+}
+input:checked{
+    height: 60px;
+    width: 30px;
+}
+div p:first-child{ /*yahapr combinators class lagyahe ye div ke firstclass ko stying deraha he. yaha par agar hamne div nahi likha to bhi ye spacify hojayega.*/
+color:blue;
+font-size: 30px;
+}
+a:first-child{  /*yaha par combinator-class use kiya he par yape styleing body ke first child ko apply ho rahe.*/
+    font-size: 50px;
+}
+/* input:first-child ye input ko apply nahi hota. agar hame 2nd,3rd child ko style apply kar na he to useke liye 
+koi provission nahi he. uskeliye separety target karna padega using the class and any commbinator selecotr ka use karke.  */
+    </style>
+</head>
+<body>
+    <a href="#">sample link1</a><!--# is the dummy link-->
+    <br><br>
+    <a href="##">sample link2</a>
+    <br><br>
+   <a href="####">sample link3</a>
+   <br><br>
+   <div>this is div</div>    
+   <br><br>
+   <input class="inpu" type="text">
+   <br><br>
+<input type="radio" name="" id="">
+<br><br>
+<input type="checkbox" name="" id="">
+<br><br>
+<div>
+    <p>para 1</p>
+    <p>para 2</p>
+    <p>para 3</p>
+
+</div>
+
+</body>
+</html>
+<!--html ke elements ko kisi specific states me
+styling apply karte ho lets say apne anker tag use
+kiya he jab aap click karte ho to tab uski ak state 
+hoti he, jab ap corsor ko hawar karte ho to wo ak alag
+state hoti he, ya jab ap kisi link ko visite karte 
+hoto that is another state.
+
+hawar,active,visited,focuse ye khuch type ke pseudo-class he.
+
+pseudo-classes use for anker tag :who to write
+ head section me wirte kiya jatahe,
+selector:psuedo-class{
+    property:value
+}
+
+(1)active : jab bhi me link ko click kar rahi hu to uska color 
+red ho raha he.link par click karne par link active hoga.
+ex: a:active{
+    color: red;
+}
+
+(2)hover : jabi usapar corssor leke jaye to uska color yellow hoga.
+ex:
+ a:hover{
+            color: rgb(166, 255, 0);
+            font-size:30px;
+        } 
+    
+  (3)visited : link ko jab ham visite kar lete he
+  tab use jo colour diya he wo milta he
+ex:
+a:visited{
+            color: aquamarine;
+        }
+        sample link1 and sample link2 are visited link.
+visited apki history mecheck karti he ki ap us link ko 
+visite ki he ya nahi. ag ham ne history clear kardi to
+hame wo link visisted nahi dikhegi.
+
+(4)link : link ko black colour kab apply hota jab 
+link ko hamne visite nahi kiya tab.
+ex:
+ a:link{
+            color: black;
+            font-style:italic ;
+        } 
+    sample link3 is not visited link.
+
+same ham ye pesudo-class div kobhi apply kar sakte he.
+ div : div ko active nahi hota kyo ki wo clikable nahi he.
+div ko link, visited puusod-class apply nahi hoge.
+ise sirf hover pusod-class apply hoga.
+ex:
+div{
+    height: 200px;
+    width: 300px;
+    background-color: rgb(224, 172, 103);
+}
+div:hover{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(216, 25, 114, 0.123);
+}
+
+input tag ko konse pusodo-calss apply akr sakte ho :
+ex: focus use kiya.focuse ye sirf input tag ko lagta he.
+ye div,anker ko nahi lagte he.
+.inpu{
+    background-color: rgb(251, 255, 0);
+    width: 200px;
+    height: 40px;
+    border: 2px;color: rgb(235, 51, 51);
+}
+input:focus{
+    background-color: blueviolet;
+}
+
+input=redio and checkbox ko click karte he to  inko ham chacke bolege.
+ye focuse nahi hote
+ex:
+input:checked{
+    height: 60px;
+    width: 30px;
+}
+means jab ham cheak box ko click kare to uski height and width bad jaye.
+ ye input=text ke liye nahi he.-->

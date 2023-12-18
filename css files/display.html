@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Display demo</title>
+    <style>
+      div {
+        background-color: blueviolet;
+        height: 100px;
+        width: 300px;
+        border: 3px solid blue;
+        /* display: block;(by default display of div is block) */
+        display: inline;
+      }
+      span {
+        background-color: rgb(236, 78, 105);
+        height: 100px;
+        width: 300px;
+        border: 3px solid yellow;
+        /* display: inline(by default property of span is inline); */
+        display: block;
+      }
+      p {
+        display: inline;
+        /* by default disply of paragraph is block */
+      }
+      h1 {
+        display: inline;
+        /* by default display of h1 is block level display */
+      }
+      a {
+        display: block;
+        /* by default display of anker tag is inline level display */
+      }
+      li {
+        display: inline;
+        /* by default display of li is block level */
+      }
+      .check{
+        display: none;
+      }
+      .check1{
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div>This is div1</div>
+
+    <div>This is div2</div>
+    <br />
+    <span> This is span 1 </span>
+    <span> This is span 2 </span>
+    <br />
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae quas est
+      minima nihil, corporis optio facere? Tempora blanditiis magnam odio natus
+      nulla, provident ea consectetur, quaerat, vero repudiandae alias
+      recusandae.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa facilis et
+      repudiandae sit provident nam, culpa dolores asperiores incidunt amet,
+      consequuntur praesentium quia, possimus deleniti ratione eaque consequatur
+      quis commodi?
+    </p>
+    <br />
+    <h1>heading 1</h1>
+    <h1>heading 2</h1>
+    <h1>heading 3</h1>
+    <h1>heading 4f</h1>
+    <br />
+    <a href="#">link1</a>
+    <a href="#">link2</a>
+    <a href="#">link3</a>
+    <a href="#">link4</a>
+
+    <ol>
+      <li>jdljfldsj</li>
+      <li>jflsdjfldsj</li>
+      <li>fjdsljfjfls</li>
+      <li>fjdslfjdslfj</li>
+    </ol>
+
+    <p class="check">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores animi
+      quos similique expedita facere laudantium quibusdam. Expedita doloribus
+      placeat minus reprehenderit ad odit amet ipsum quaerat rerum, provident
+      officia inventore.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores animi
+      quos similique expedita facere laudantium quibusdam. Expedita doloribus
+      placeat minus reprehenderit ad odit amet ipsum quaerat rerum, provident
+      officia inventore.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores animi
+      quos similique expedita facere laudantium quibusdam. Expedita doloribus
+      placeat minus reprehenderit ad odit amet ipsum quaerat rerum, provident
+      officia inventore.
+    </p>
+<hr>
+    <p class="check1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores animi
+      quos similique expedita facere laudantium quibusdam. Expedita doloribus
+      placeat minus reprehenderit ad odit amet ipsum quaerat rerum, provident
+      officia inventore.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores animi
+      quos similique expedita facere laudantium quibusdam. Expedita doloribus
+      placeat minus reprehenderit ad odit amet ipsum quaerat rerum, provident
+      officia inventore.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores animi
+      quos similique expedita facere laudantium quibusdam. Expedita doloribus
+      placeat minus reprehenderit ad odit amet ipsum quaerat rerum, provident
+      officia inventore.
+    </p>
+  </body>
+</html>
+<!--Div :
+ye hamesha new line se strat hota he.
+ex:
+ div {
+        background-color: blueviolet;
+        height: 100px;
+        width: 300px;
+        border: 3px solid blue;
+        }
+
+span :
+ye jab tak space he tab tak continue hoga.
+ex:
+ span {
+        background-color: rgb(236, 78, 105);
+        height: 100px;
+        width: 300px;
+        border: 3px solid yellow;
+        }
+
+paragraph :
+jab ha do paragraph lete he to wo 2nd pargraph 1st paragrph ke 
+age adjest nahi hota. is behaver div kejesa he.
+ye bhi new line se start hota he.
+
+Block level element :
+means jo tag new line se start hote he use block level element kahte he.
+ex:jin ki by default display property block level element
+div,paragraph tag,li,ul,h1 to h6, header, footer, section,form tags
+
+Inline level element :
+means jo tag new line se start nahi to yane space rahe to uske samne mehi 
+repite hota he jabtak space tab tak.
+ex:by default display inline hota he
+span,anker(a) tag, ing tag
+
+
+basicaly css me ham in ki property change karege j
+yane block level display ko inline diplay  kar sakte he.
+
+ex:(1)
+ div {
+        background-color: blueviolet;
+        height: 100px;
+        width: 300px;
+        border: 3px solid blue;
+        /* display: block;(by default display of div is block) */
+        display: inline;
+      }
+
+      (2)
+       span{
+        background-color: rgb(236, 78, 105);
+        height: 100px;
+        width: 300px;
+        border: 3px solid yellow;
+       /* display: inline(by default property of span is inline); */
+        display: block;
+    }
+
+    (3)
+     p{
+        display: inline;
+        /* by default disply of paragraph is block */
+      }
+
+      (4)
+      h1{
+        display:inline;
+        /*by default display of h1 is block level display*/
+     }
+
+     (5)
+     a{
+        display: block;
+        /* by default display of anker tag is inline level display */
+      }
+
+      (6)
+     li{
+        display: inline;
+        /* by default display of li is block level */
+      }
+
+jab ham kisi website ka layout banate he to is ka bohot use hota he.
+
+
+Thired display property is Non :
+jab ham ko kisi case me html elemnt ko hide karna he to non property use kar the he.
+ex : jab ham password use karte he galt heya kar jo messege hame dikhta he
+bad me diskhta he beacuse uska diplay none hota he.
+ex:
+.check{
+        display: none;
+      }
+
+There is one more property use for hide :
+jese display:none hide karta he we se 
+ visibility: hidden bhi hide karta he.
+ ex:
+ .check2{
+   visibility: hidden;
+ }
+ In case of visibility uski space koinahi lesakta.
+ hide hone ke bad bhi uski space dikhegi.
+ But in case of dispaly uski space dusara tag use kar rahahe.
+ wo empty space nahi chodta.
+ 
+-->

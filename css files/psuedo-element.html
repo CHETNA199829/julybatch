@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- sintax use for psuedo-element:
+ selector::psuedo_element{
+    property:value;
+ } (diffrence between psuedo-class and psuedo-eelment is (::) use
+ in psuedo-element and (:) use in psuedo-class. )-->
+ <title>psuedo-elements</title>
+<style>
+   p::first-line{
+    color: rgb(94, 20, 163);
+   }
+   p::first-letter{
+    color: rgb(55, 177, 51);
+    font-size: 50px;
+   }
+   #para::first-line{
+    color: brown;
+   }
+   #para2::before{
+    content:'xxxxxxxx' ;
+   }
+   #para2::after{
+    content: 'yyyyyyy';
+   }
+   ::marker{
+    color: rgb(18, 189, 83);
+    font-size: 40px;
+   }
+   li.aa::marker{
+    color: rgb(177, 18, 18);
+   }
+   ul li::marker{
+    color: rgb(216, 216, 58);
+    font-size: 70px;
+   }
+   p::selection{
+    background-color: rgb(221, 185, 130);
+    color: rgb(224, 32, 32);
+   }
+   
+</style>
+    
+</head>
+<body>
+    <!--applies styling to the specific part of html element.
+    1. first-line-->
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Magnam aspernatur cumque distinctio error cupiditate. Aliquid aut doloremque temporibus, 
+     magnam vel eius explicabo quis, possimus pariatur
+      dolores, blanditiisut soluta sapiente.
+      Magnam aspernatur cumque distinctio error cupiditate. Aliquid aut doloremque temporibus, 
+      magnam vel eius explicabo quis, possimus pariatur
+       dolores, blanditiisut soluta sapiente.
+ </p>
+ <br>
+ <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Magnam aspernatur cumque distinctio error cupiditate. Aliquid aut doloremque temporibus, 
+    magnam vel eius explicabo quis, possimus pariatur
+     dolores, blanditiisut soluta sapiente.
+     Magnam aspernatur cumque distinctio error cupiditate. Aliquid aut doloremque temporibus, 
+     magnam vel eius explicabo quis, possimus pariatur
+      dolores, blanditiisut soluta sapiente.</p>
+
+      <p id="para2">This is pragraph</p>
+
+      <ol>
+        <li class="aa">one</li>
+        <li>two</li>
+        <li>three</li>
+    </ol>
+   <ul>
+    <li>four</li>
+    <li>five</li>
+    <li>six</li>
+   </ul>
+
+</body>
+</html>
+<!-- first-line : jo line first he usko stying provide ho gi adject karke bad bhi jo first ho uskoch stying provide hogi.
+p::first-line and #para::first-line(here in paraghrap we use id="para") work same.
+
+first-letter : by using this we can apply the color to the firts
+letter of the pragraph.
+ex:
+p::first-letter{
+    color: rgb(9, 255, 0);
+    font-size: 50px;
+   }
+
+before and after : agar pargraph ke age or phicheme kuch paragraph add kar na hoga tho 
+inka use kiya jata he.
+ex:
+p::before{
+    content:'xxxxxxxx' ;
+   }
+
+   p::after{
+    content: 'yyyyyyy';
+   }
+
+marker psuedo-element : ye ordered and unordered list me use hota he.
+in me jo 1.,2.,3. ye numbering and symbols jo hote he use stying provide karta he.
+ex:
+::marker{
+    color: rgb(18, 189, 83);
+    font-size: 40px;
+   }
+
+   or agar spacificaly sirf ak ko hi apply kar na he to li me class apply kar ke 
+   head seaction me marker applye kare
+   ex:
+   li.aa::marker{
+    color: rgb(177, 18, 18);
+   }
+
+agar muje sirf unordered list ko color dena he to (ul lo::marker)use kao.
+ex:
+ul li::marker{
+    color: rgb(216, 216, 58);
+    font-size: 70px;
+   }
+same for ordered list(ol li::marker)
+
+selection psuedo-elemnet : jab ham kisi paragraph ko select kar te he to uske background colour
+blue and uske text ka colour white ho jata he.ye ham change kar sakte he.
+ex:
+ -->

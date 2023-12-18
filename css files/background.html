@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>background demo</title>
+    <style>
+      body {
+        /* background-color: aquamarine;*/
+        /*background-image: url(https://img.freepik.com/premium-photo/cute-baby-panda-bear-with-big-eyes-3d-rendering-cartoon-illustration_691560-4917.jpg);*/
+        /*background-image: url("./../assets/blueflowers");
+        background-repeat: no-repeat;
+        background-attachment:fixed ;*/
+        /* background-position:right top;*/
+        /* background-repeat:repeat-x;
+        background-repeat: repeat-y;*/
+        background:red  url("./../assets/blueflowers") 
+        repeat-x fixed right top;
+      }
+      div {
+        height: 800px;
+        width: 800px;
+        /*  background-image: url(https://img.freepik.com/premium-photo/cute-baby-panda-bear-with-big-eyes-3d-rendering-cartoon-illustration_691560-4917.jpg);*/
+        /* background-color: rgba(83, 83, 170, 0.418);*/
+        /*opacity: 0.5;*/
+        /*border: 8px solid red*/
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa dolorem,
+      consequatur numquam distinctio necessitatibus eum, accusantium ab repellat
+      beatae inventore sunt officiis? Excepturi est tempore saepe. Obcaecati id,
+      soluta quia dolore atque ex harum ducimus laboriosam quidem et sequi
+      officiis recusandae laborum eveniet veniam voluptas vel minima. Voluptatem
+      numquam, unde dolore dolorum expedita laudantium officia praesentium vel
+      quidem debitis? Explicabo odit commodi exercitationem asperiores quis
+      placeat harum, natus in quasi eius iusto optio quidem nulla voluptatum.
+      Ex, molestias unde. Neque at soluta voluptatum ratione similique omnis
+      tempore amet facilis eaque distinctio dolore expedita laboriosam quod
+      eligendi consequuntur dignissimos alias magnam, sit, inventore debitis!
+      Numquam voluptates commodi suscipit aliquam expedita culpa cupiditate
+      inventore quis, consequuntur aut ea explicabo sed fugiat consequatur enim
+      provident reprehenderit eos recusandae ipsa. Vitae pariatur autem sit
+      dicta assumenda unde quibusdam inventore suscipit, aspernatur quas hic,
+      sint blanditiis architecto alias incidunt deserunt odit voluptates illo!
+      Libero consequuntur eligendi quidem, ad quo sed quae quaerat nostrum est
+      error similique nesciunt magnam perferendis, animi facilis molestias,
+      alias dignissimos magni. Cumque nihil aliquid ab veritatis accusamus
+      beatae deleniti iste, distinctio vero, tempora illo incidunt tempore rerum
+      suscipit sint minima, porro commodi laboriosam eaque asperiores. Ea
+      consequatur animi architecto dignissimos tempore aut, quia laboriosam, eos
+      illo eaque, ipsum ab? Fugit consequatur exercitationem sed distinctio,
+      iusto inventore atque error temporibus molestiae. Eius, dignissimos
+      temporibus maxime aliquam facere porro numquam harum optio labore est
+      deserunt sit ex similique perferendis molestias. Eaque nulla dolor fuga
+      recusandae. Quaerat reiciendis aliquam, deleniti officia reprehenderit
+      sequi animi exercitationem quam in veritatis vitae doloremque provident
+      tempore magnam ullam nemo, saepe nostrum impedit vero nulla nihil.
+      Incidunt quod labore dolorem provident doloribus corrupti alias aliquid
+      itaque temporibus architecto laborum dolor possimus, debitis unde? Eaque,
+      quaerat maiores consectetur ratione repellendus non corporis atque
+      consequuntur provident reiciendis adipisci ad sapiente alias?
+    </p>
+  </body>
+</html>
+<!--css me background colou kese or kise dete he.
+
+(1)ham pure body ko colour de sakte he
+ex:
+ body{
+        background-color: aquamarine;
+       }
+    
+    (2)ham div ko desakte he colour
+ex:
+div{
+        height: 300px;
+        width: 500px;
+        background-color: green;
+        border: 8px solid red
+        }
+
+opscity : meaning is transparency yane ap koyibhi colou do
+usko ham transperent bana sakte he. ag hame bacground colou bhidenahe
+or text ka bhi colou dikhna chye.jo battons jab wo focus nahi ho te to 
+wo fent dickte he ya har karne par dark hojate he ye bhi ham opscity se kar
+sakte he. 
+is kis value 0-1 me raing karti he.
+ jab opscity ki vaalue nahi dete thab uski value hoti he 1
+(defolt value)
+ex:
+ height: 300px;
+        width: 500px;
+        background-color: blue;
+        opacity: 0.5;
+    }
+or
+div{
+        height: 300px;
+        width: 500px;
+        background-color: rgba(0, 128, 0, 0.37);
+        }
+    is me rgba aya a stand for alpha, middle ke palet se ham
+opscity select kar sakte he. yaha par opscity ki value 0.418 he
+Agra hame seleparety opacity nahi dena he to ham use colou palate
+me se de sakte he.
+
+background-image : 
+googale par se koibhi image copy inmage address kar na or use image
+url me past kar na.ye aham div provide karte he to waha par height and width
+leni padti he nahi to image puri nahi dikhti.
+is liye body me provide karra 
+ex:
+ body{
+            background-color: aquamarine;
+            background-image: url(https://img.freepik.com/premium-photo/cute-baby-panda-bear-with-big-eyes-3d-rendering-cartoon-illustration_691560-4917.jpg);
+             }
+
+hamare pas image he use kese use kare :
+ url me path kese de(ak to image par jao or copy relative path bolo,
+ dusra path he ./current folder ke baharke sabhi files ka path.is se css ki sabhi file ke pathe ayege )
+ agar ./../diya to css ke bahar ke sabhi files ke path apo show hoge.
+
+background repite : 
+is ki three values he 
+(1)no-repeat : agr hamne no-repeat dala to image repeate nahi hogi
+ex:
+background-repeat: no-repeat;
+
+(2)repeat-x : 
+x- axise me reapit hote he.horezontly repeat.
+ex:
+background-repeat:repeat-x;
+ 
+(3)repeate-y :
+y- axise me repeat hote he. verticaly repeat.
+ex:
+background-repeat:repeat-y;
+
+(4)repeat : 
+repeate dala to image repeate hogi(defolt value)
+
+background-postion : 
+is se image ki potion chage karte ati
+pahale image left top(bydefolt) pe thi right top se right top per jayegi.
+right bottom,left bottom.
+
+(5)background attachment : 
+scroll karneke bad image fixed rahegi or sirf pargraph scroll hoga.
+ex:
+ background-attachment:fixed ;
+ 
+ defolt value of background-attachment:scroll
+ -->
+ <!--shorthand property : 
+aag background ko alag alag property ke alag alag value lake likhna pada to kita bada kod hojaye ga
+is liye is properrty ka use hota he.
+(1)background : background ke case me shorthad property he sirf background color
+shorthand property:background: bg-color bg-img bg-repeat bg-attachment bg-position
+(bg means background) ye sari property sequence me dena padega.
+
+jis line ko comment karna he us line par jake or use select karke ctrl+/ press karna to wo comment banjyega.
+
+-->

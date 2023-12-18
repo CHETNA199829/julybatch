@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+    <style>
+        .containar{
+            position: relative;
+        }
+        .one{
+            position: relative;
+           /* z-index: 1; */
+           z-index: -999999999;
+            border: 1px solid red;
+            background-color: aqua;
+            height: 100px;
+            margin: 30px;
+        }
+        .two{
+            position: absolute;
+            z-index: 3;
+            background-color: blueviolet;
+            height: 60px;
+            width: 50%;
+            left: 50px;
+            top: 50px;
+        }
+        .three{
+            position: absolute;
+           z-index: 2;
+            background-color: rgb(139, 216, 15);
+            width:70% ;
+            left: 250px;
+            top: 15px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="containar">
+        <div class="one">ONE</div>
+        <div class="two">TWO</div>
+        <div class="three">THREE</div>
+    </div>
+
+    
+</body>
+</html>
+<!--
+    Z-index : jab ak element dusare element par overlap hota he because of positions.
+    jab overlaping hoti he div ki use hatane keliye we use z-index.
+ex:
+ .containar{
+            position: relative;
+        }
+        .one{
+            position: relative;
+           z-index: 1;
+            border: 1px solid red;
+            background-color: aqua;
+            height: 100px;
+            margin: 30px;
+        }
+        .two{
+            position: absolute;
+            z-index: 3;
+            background-color: blueviolet;
+            height: 60px;
+            width: 50%;
+            left: 50px;
+            top: 50px;
+        }
+        .three{
+            position: absolute;
+           z-index: 2;
+            background-color: rgb(139, 216, 15);
+            width:70% ;
+            left: 250px;
+            top: 15px;
+            height: 100px;
+        }
+
+        jiska in z-index sab se jada he wo pahale dikhraha he yane 
+        z-index=3 pahale dikega bad me z-index=2 dikhega or useke bad
+        z-index=1.
+        z-index unehi apply hota ha ginki position change kihe i.e
+        jinki position other than static chhod ke other ke liye work 
+        hoga.
+        z-index accutualy is work like satck means ake
+        upar ak jese work karta he.
+
+        agar kisi index ko sabse phichherakhna hoga hameshakeliye to 
+        z-index: -999999999; ye use kar the he.yese bhi z-index likate he.
+        z-index: 999999999; ye sabse samne rakhne keliye use karte he.
+
+        
+-->

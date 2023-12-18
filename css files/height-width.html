@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Height width demoS</title>
+    <style>
+        /* div{
+            height: auto;
+            width: auto; 
+            border: 2px solid red;
+            background-color: aquamarine; 
+        } */
+        /* div{
+            height: initial;
+            width: initial;
+            border: 4px solid red;
+            background-color: blueviolet;
+        } */
+        div{
+            height: initial;
+            max-width: 800px;
+            border: 4px solid red;
+            background-color: blueviolet; 
+        }
+        
+        /* .div3{
+            height: 200px;
+            width: 500px;
+            border: 4px solid green;
+            background-color: orange;
+        }
+        .div4{
+            height: 50%;
+            width: 75%;
+            border: 4px solid rgb(56, 114, 56);
+            background-color: rgb(255, 0, 43);
+        } */
+         .div2{
+            height: 500px;
+            width: 800px;
+            background-color: aquamarine;
+        }
+
+          .div3{
+            height: 50%;
+            /* 250 */
+            width: 50%;
+            /* 400 */
+            border: 4px solid green;
+            background-color: orange;
+        }
+        .div4{
+            height:inherit;
+            /* 50% 125 */
+            width: inherit;
+            /* 50% 200 */
+            border: 4px solid rgb(56, 114, 56);
+            background-color: rgb(255, 0, 43);
+        } 
+        
+
+
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam porro
+      blanditiis nostrum! Cum odit eos maiores culpa laudantium rerum
+      perspiciatis vel, ipsam commodi, mollitia illum corporis unde inventore
+      magni ea!
+    </div>
+    <br><br>
+    <div class="div2">
+        <div class="div3">
+            <div class="div4"></div>
+          </div>
+         </div>
+    
+  </body>
+</html>
+<!--some value provide to height and width property.
+auto, px, %, initial, inherit
+(a)auto :
+auto value width ko di to wo puri screen ki value leta he.
+ex:
+ div{
+            height: 150px;
+            width: auto; 
+            border: 2px solid red;
+            background-color: aquamarine; 
+        }
+
+   if we apply auto value to height then it will take avalabel screen
+   leleta he.jita contain ho ge uske hesab se adject hoga.
+   ex:
+ div{
+            height: auto;
+            width: auto; 
+            border: 2px solid red;
+            background-color: aquamarine; 
+        }
+
+     (b)% :
+      if we give 50% width the it will take value of 
+      50% of screen.and if we take value of height is 
+      75% the it will take the value of given 75% of 
+      give screen or div.
+      ex:  
+ .div3{
+            height: 200px;
+            width: 500px;
+            border: 4px solid green;
+            background-color: orange;
+        }
+        .div4{
+            height: 50%;
+            width: 75%;
+            border: 4px solid rgb(56, 114, 56);
+            background-color: rgb(255, 0, 43);
+        }
+
+        (c)inherit :
+        parent ki property lega.
+        ex:
+         .div3{
+            height: 200px;
+            width: 500px;
+            border: 4px solid green;
+            background-color: orange;
+        }
+        .div4{
+            height:inherit;
+            width: inherit;
+            border: 4px solid rgb(56, 114, 56);
+            background-color: rgb(255, 0, 43);
+        } 
+
+        (d)initial :
+      ex:
+      div{
+            height: initial;
+            width: initial;
+            border: 4px solid red;
+            background-color: blueviolet;
+        }
+
+        Maxwidth :
+        ye sirf width keliye hota he.
+        if we give width=800px it will be creat problem for 
+        adject according to screen.
+        ex:
+         div{
+            height: initial;
+            width: 800px;
+            border: 4px solid red;
+            background-color: blueviolet; 
+        }
+        ye chhote screen par ise horizontal schroll lagega.this is snot 
+        good layeout of web site.kisi web site ko vertial schroll lage its is good.
+       is problem ko hatane keliye maxwidth property use karte he.
+       ex:
+ div{
+            height: initial;
+            max-width: 800px;
+            border: 4px solid red;
+            background-color: blueviolet; 
+        }
+
+
+-->

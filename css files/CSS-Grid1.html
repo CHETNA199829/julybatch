@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-Grid1</title>
+    <style>
+      .container {
+        display: grid;
+        /* grid-template-columns: 50px 50px 50px 50px;  */
+        grid-template-columns: auto auto auto auto;
+        /* grid-template-columns: 80px 50px auto 10px; */
+        /* grid-template-rows: 50px 100px 40px; */
+        grid-template-rows: auto auto;
+        height: 500px;
+        /* column-gap: 10px;
+             column-gap: 10px; */
+        gap: 10px;
+        /* justify-content: center; */
+        /* justify-content: end; */
+        /* justify-content: start; */
+        /* justify-content: space-around; */
+        /* justify-content: space-between; */
+        /* justify-content: space-evenly; */
+        /* align-content:center ; */
+        /* align-content: start; */
+        /* align-content: end; */
+        /* align-content: space-between; */
+        /* align-content: space-around; */
+        /* align-content:space-evenly ; */
+        background-color: aquamarine;
+        padding: 10px;
+      }
+      #clrBick {
+        color: black;
+        font-size: 20px;
+      }
+      .grid-item {
+        background-color: rgb(245, 4, 4);
+        border: 1px solid rgb(5, 1, 17);
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+      .one {
+        background-color: pink;
+        /* grid-column-start: 1; */
+        /* grid-column-end: 3; */
+        /* grid-column-end: 5; */
+        grid-column: 1/5;
+      }
+      .two {
+        background-color: green;
+        /* grid-row-start:2 ;
+            grid-row-end: 4; */
+        /* grid-row:2/4; */
+        grid-row: 2/5;
+      }
+      .five {
+        background-color: green;
+        /* grid-row-start:2 ;
+            grid-row-end: 4; */
+        /* grid-row: 2/4; */
+        grid-row: 2/5;
+        /* grid-column-start: 4;
+            grid-column-end: 5;  */
+        grid-column: 4/5;
+      }
+      .eight {
+        background-color: crimson;
+        /* grid-column: 1/5; */
+        grid-column: 1 / span 4;
+      }
+      .three {
+        /* grid-row: 2/4; */
+        grid-row: 2 / span 2;
+      }
+      .seven {
+        grid-column: 2 / span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clrBick" class="container">
+      <div id="clrBick" class="grid-item one">
+        <header>
+          Header Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
+          facilis nesciunt nobis aperiam nam, dolor quam? Eveniet placeat in ex?
+        </header>
+      </div>
+      <div class="grid-item two">2</div>
+      <div class="grid-item three">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
+        recusandae laborum ut blanditiis maxime, incidunt architecto in
+        asperiores dignissimos harum praesentium dolorem reprehenderit modi
+        eius. Eveniet accusamus nam fugiat molestias debitis impedit doloribus
+        voluptates modi nisi ut quisquam vel alias culpa, enim est esse iure
+        perspiciatis, earum optio deleniti facilis laudantium corporis cum
+        iusto. Nihil animi tempore itaque ex, assumenda magnam, illum fugiat
+        laudantium minima pariatur quisquam eum, quam ducimus facilis error at
+        illo doloribus dolor omnis sequi maxime quis vel! In dolor ipsam
+        voluptatem eligendi fuga quibusdam commodi neque? Nobis minima saepe
+        accusamus repellendus non. Architecto dolores ipsa porro.
+      </div>
+      <div class="grid-item">4</div>
+      <div id="clrBick" class="grid-item five">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item seven">7</div>
+      <div class="grid-item eight">8</div>
+    </div>
+  </body>
+</html>
+<!--(2)grid-template-coloum :
+  using this proerty we can deside no. of coloum.
+for example We want four coloum then write fout times auto
+grid-template-colums:auto auto auto auto;
+if we give grid-template-colums:50px 50px 50px 50px it will decide the no.of coloum and width
+of the coloum.
+ak grid-item ak coloum me jata he.
+
+ grid-template-columns: auto auto auto auto;
+ by using auto value we can divide the coloum equly.
+
+ grid-template-columns: 80px 50px auto 10px;
+ by using this we can apply the diffrent value to coloum.
+
+(3)grid-template-row: 
+ grid-template-rows: 50px 100px;
+ by using this we can increase the size of coloum.
+
+ we can also add the row. there is creat the space of row but there is 
+ no grid-item so it will not 
+ ex:
+ grid-template-rows: 50px 100px 40px;
+
+ (4)colum-gap:
+ colum ke bhich me gap dalnekeliye.
+ ex:
+  column-gap: 10px;
+
+ (5)row-gap :
+ row ke bhich me gap dalnekeliye.
+ex:
+ row-gap: 10px;
+
+ colum-gap and row-gap keliye short hand property is gap.
+ ex:
+ gap:10px ; (ye row and colum donokeliye apply hoga.)
+
+ (6)justify-content: 
+ is use to change the position of grid layeout ukihi horizontal position  me change karne keliye use karte he. 
+rows and colum ka jo stracture use container ke right,left,center yes 
+move kar sakte he.for that we use justify contaent use karte he.
+Rule for justify-content is grid atoms ki width kam hohi chye bhar ke container
+se is liye ham ne grid-template-columns: auto auto auto auto; nahi liyea.
+there is some value of justify-content :
+
+(a)center :
+ex:
+ .container{
+            display: grid;
+             grid-template-columns: 50px 50px 50px 50px; 
+             grid-template-rows: 50px 100px 40px;
+             gap:10px ;
+             justify-content: center;
+             background-color: aquamarine;
+             padding: 10px;
+
+        }
+
+(b)end :
+ex:
+.container{
+            display: grid;
+             grid-template-columns: 50px 50px 50px 50px; 
+             grid-template-rows: 50px 100px 40px;
+             gap:10px ;
+             justify-content:end;
+             background-color: aquamarine;
+             padding: 10px;
+
+        }
+
+ (c)start :
+ ex:
+ .container{
+            display: grid;
+             grid-template-columns: 50px 50px 50px 50px; 
+             grid-template-rows: 50px 100px 40px;
+             gap:10px ;
+             justify-content: start;
+             background-color: aquamarine;
+             padding: 10px;
+
+        }   
+        
+   (d)space-around :
+   ex:
+   .container{
+            display: grid;
+             grid-template-columns: 50px 50px 50px 50px; 
+             grid-template-rows: 50px 100px 40px;
+             gap:10px ;
+             justify-content: space-around;
+             background-color: aquamarine;
+             padding: 10px;
+
+        }   
+        means colum ke around jo space he wo equaly divided ho ta he.
+       
+        (e)space-between :
+        ex:
+        .container{
+            display: grid;
+             grid-template-columns: 50px 50px 50px 50px; 
+             grid-template-rows: 50px 100px 40px;
+             gap:10px ;
+             justify-content:space-between;
+             background-color: aquamarine;
+             padding: 10px;
+
+        }
+        means do colum ke bhich ki sapce eauly divided hota he.
+(f)space-evenly :
+ex:
+.container{
+            display: grid;
+             grid-template-columns: 50px 50px 50px 50px; 
+             grid-template-rows: 50px 100px 40px;
+             gap:10px ;
+             justify-content: space-evenly;
+             background-color: aquamarine;
+             padding: 10px;
+          }
+means jo space he wo equaly divide.
+
+(7) align-content :
+align-content ye grid ki layout vertical position ke liye use karte he.
+vertical me sapce nahi jada is liye we give height to the container.
+There is some values of align-content :
+(a)center :
+ex:
+.container{
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px; 
+            grid-template-rows: 50px 100px 40px;
+            height:500px ;
+            gap:10px ;
+            align-content:center ;
+            background-color: aquamarine;
+            padding: 10px;
+
+        }
+(b)start :
+ex:
+.container{
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px; 
+            grid-template-rows: 50px 100px 40px;
+            height:500px ;
+            gap:10px ;
+            align-content:start;
+            background-color: aquamarine;
+            padding: 10px;
+
+        }
+
+(c)space-around :
+ex:
+.container{
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px; 
+            grid-template-rows: 50px 100px 40px;
+            height:500px ;
+            gap:10px ;
+            align-content:space-around ;
+            background-color: aquamarine;
+            padding: 10px;
+
+        } 
+        means jo row ke around space he use equly divide karta he.
+      
+        (d)space-between :
+        ex:
+        .container{
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px; 
+            grid-template-rows: 50px 100px 40px;
+            height:500px ;
+            gap:10px ;
+            align-content:space-between ;
+            background-color: aquamarine;
+            padding: 10px;
+
+        }
+        means row ke bhich ki space equal hoti he.
+
+        (e)space-evenly :
+        ex:
+        .container{
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px; 
+            grid-template-rows: 50px 100px 40px;
+            height:500px ;
+            gap:10px ;
+            align-content:space-evenly ;
+            background-color: aquamarine;
+            padding: 10px;
+
+        }
+        means rows ki hight equly divide.
+ 
+        Now we can provide the styling to grid-items :
+
+       (1) we can change indivigualy.
+        ex:
+         .one{
+            background-color: yellow;
+        }
+
+       (2)grid-colum :
+       it is use to positioning the grid colum.
+       (a)grid-column-strat :
+       (b)grid-column-end :
+       ex:
+       .one{
+            background-color: yellow;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+grid line 1 ko grid line 3 tak lana he to at that time we use this.
+
+ex:
+ .one{
+            background-color: pink;
+            grid-column-start: 1;
+           grid-column-end: 5;
+        }
+grid ne puri row aquried kar li.
+
+grid-column-start and grid-column-end keliye shorthand property he i.e.
+grid-column:start no./end no.
+ex:
+grid-column:1/5;
+
+same for row grid-row-start and grid-row-end keliye shorthand property he i.e.
+grid-row:start no./end no.
+ex:
+grid-row:2/4
+
+ grid-column: 1/span4; we can right this way also .
+ span4 means combined the four coloum from 1.
+
+this is responsive mean use horizantal scrol bar nahi lagna chaye.
+
+ Grid-area :
+
+-->

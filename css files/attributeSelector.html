@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--sintax for attribute selector is
+    element[attribute]{
+        property:value;
+    }-->
+
+    <title>Attribute selector</title>
+    <style>
+      a[target] {
+        color: brown;
+      }
+      p[class]{
+        color: rgb(255, 0, 140);
+      }
+      a[target='_blank']{
+        color: aqua;
+      }
+      p[class='check']{
+        border: 2px;
+      }
+      p[class~='sample']{
+       border: 2px solid green
+      }
+      p[class|='Lorem']{
+        border: 5px solid blue
+      }
+      p[title^='panda']{
+        background-color:yellow ;
+      }
+      p[title$='happy']{
+        text-decoration: line-through;
+      }
+      p[title*='app']{
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--It applies styling on basis attribute and the value of attribute of html elemnet.
+    -->
+
+    <a href="">sample1</a>
+    <a href="" target="_self">sample2</a>
+    <a href="" target="_parent">sample3</a>
+    <a href="" target="_blank">sample4</a>
+    <p class="check" title="panda">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+      repudiandae ipsa, laborum voluptatem cumque aspernatur sapiente veritatis
+      earum omnis quia harum quidem laboriosam corrupti dicta consequatur
+      voluptatibus quos fugiat quod!
+    </p>
+    <br>
+    <p class="check sample" title="panda-happy ">
+        Lorem ipsum fdsdfjl dolor sit amet consectetur adipisicing elit. Dolores
+        repudiandae ipsa, laborum voluptatem cumque aspernatur sapiente veritatis
+        earum omnis quia harum quidem laboriosam corrupti dicta consequatur
+        voluptatibus quos fugiat quod!
+      </p>
+      <p class="Lorem" title="happy-panda">
+        Lorem ipsum fdsdfjl dolor sit amet consectetur adipisicing elit. Dolores
+        repudiandae ipsa, laborum voluptatem cumque aspernatur sapiente veritatis
+        earum omnis quia harum quidem laboriosam corrupti dicta consequatur
+        voluptatibus quos fugiat quod!
+      </p>
+      <p class="Lorem-simple" title="cutepanda happy">
+        Lorem ipsum fdsdfjl dolor sit amet consectetur adipisicing elit. Dolores
+        repudiandae ipsa, laborum voluptatem cumque aspernatur sapiente veritatis
+        earum omnis quia harum quidem laboriosam corrupti dicta consequatur
+        voluptatibus quos fugiat quod!
+  </body>
+</html>
+<!--Attribute selector : agr attribute pressent he to uske
+bassi par styling appying hogi.
+1.[attribute]
+ex:
+ a[target] {
+        color: brown;
+      }
+      p[class]{
+        color: blue;
+      }
+      here in akere tag target is attribute.
+      and in paraghrph tag me class attribute he.
+
+2.[attribute='value'](exact value mached)
+    ya pe jis anker tag ke taget attibute ki exact value blank he
+use stying applye karo.exact value means a[target='_blank'] in _blank write as it is
+do not write 'black'it will give you error.
+ex:
+ a[target='_blank']{
+        color: aqua;
+      }
+    
+    3.[attribute~='value'](should contain this value)
+is ka matlab he attbibute ko ap kitibhi value desakte ho.
+usme ki ak bhi value likh to styling apply hoga.
+ex:p[class='check']{
+        border: 2px;
+
+p[class~='check']{
+       border: 2px solid green
+      }
+      here in <p class="check sample" value is check1 sample but we write check then alos
+      stying is apllyed.
+
+4.[attbibute|='value'] 
+means ak to exact match honi chaye or followed by the hyphen(-)
+ex:
+ p[class|='Lorem']{
+        border: 5px solid blue
+      }
+      is ne jis ka class=Lorem-simple  he isebhi border di (-)ka use kiya he.
+      (-)ke age kuchh bhi hosaktahe.
+    
+    5.[attribute^='value'](^ isse cap bolte he.)
+    tum khocchbhi value do wo is value se start honi chye.
+    value should start with given value.
+    ex:
+p[title^='panda']{
+        background-color:yellow ;
+}
+    ye sirf first two paragraph ko apply hua kyo ki uski value panda se start horahi the.
+agar panda ke age space bhi raha to wo apply nhi hogi.
+
+6.[attribute$='value']
+tum age kuchh bhi do par end yehi value se hona chye hona chahiye.
+ex:
+p[title$='happy']{
+        text-decoration: line-through;
+      }
+
+7.[attribute*='value'](* isse asterisk bolte he.)
+ye value kahi pe bhi ajaye yane starting me ya ending me ya middle me
+to stying apply hogi.
+ex:
+p[title*='app']{
+        font-size: 50px;
+      }
+      
+
+-->

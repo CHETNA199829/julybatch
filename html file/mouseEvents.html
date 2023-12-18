@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>mouse event</title>
+</head>
+<body>
+    <button onclick="console.log('button click')">click</button>
+    <p onclick="alert('click on paragraph')">Lorem ipsum dolor sit, amet 
+        consectetur adipisicing elit.
+         Tempore dignissimos sint autem
+          ipsum laborum veniam, corporis, 
+          aliquid mollitia iste a, harum 
+          magnam dicta corrupti ea tenetur
+         est? Repellendus, necessitatibus? 
+         At!</p>
+         <div style="height: 200px;; width: 500px;;
+         background-color: rgb(186, 160, 211);
+         " onclick="console.log('click in div')" 
+         ondblclick="console.log('on doble click')"
+         onmousemove="console.log('on mouse move')"></div>
+<br>
+<div style="height: 200px;; width: 500px;;
+         background-color: rgb(211, 160, 175);" 
+         onmouseenter="console.log('mouse enterd')"></div> />
+<br>
+<div style="height: 200px;; width: 500px;;
+         background-color: rgb(160, 211, 175);" 
+         onmouseleave="console.log('on mouse leave click')"></div>
+<br>
+<div id="hey" style="height: 200px;; width: 500px;;
+         background-color: rgb(230, 59, 187);"
+         onmouseenter="enter()"
+         onmouseleave="leave()" ></div>
+         <script>function enter(){
+document.getElementById('hey').style.backgroundColor='red';
+document.getElementById('hey').style.height='800px';
+            document.getElementById('hey').style.weidth='700px';
+
+}
+         function leave(){
+            document.getElementById('hey').style.backgroundColor='rgb(230, 59, 187)';
+            document.getElementById('hey').style.height='200px';
+            document.getElementById('hey').style.weidth='500px';
+        }
+         </script>
+<br>
+<div style="height: 200px;; width: 500px;;
+         background-color: rgb(202, 235, 20);"
+         onmouseout="console.log('mouse is out')"
+         onmousedown="console.log('on mouse down')"
+         onmouseup="console.log('mouse up')"
+         onmouseover="console.log('on mouse over')"
+         onwheel="console.log('on scrolling the mouse')"></div>
+<br>
+<button ondblclick="console.log('doble click')"
+>click 2</button>
+<br>
+</body>
+</html>
+<!--(1)onclick event : ye ham ne button ke liye dekha 
+tha. ye event paragraph ke liye bhi work kar ta he
+agar ham paragraph par click kare ge to.
+we can also give the div to onclick event.
+
+(2)ondblclick event: use for button,ye div or parghaph ko 
+de sakte he.
+
+(3)onmousemove event : ye event div ko diya he.ye event ham parghaph 
+or other ko bhi desakte he.yese jada nahi use kar the koi ki ye hot bar 
+fire hota he 
+
+onmouseenter event :  jab ye us div par corssor jata he tab fire hota
+he.
+
+(4)onmouseleave event :  div par corrsor baha jaye ga to trigar hoga.
+
+(5)onmouseout event : ye nomouseleave je sahi he. ye sabhi jo bhi tags ham 
+ke he uspar use kar skate ho heading, pharagrah etc.
+
+(6)onmousedown event : jab ap div par click karte ho tab ye event 
+fired hota he.
+
+(7)onmouseup event : mouse up upar usthne ke band fired hota he.
+
+(8)onmouseover event : ye same he onmouseenter. most use me onmouseleve and 
+onmouseout are most use. 
+
+(9)onwheel event : mouse ko scroll kar ne par hota he.
+it well be function on laptop use your two finger on mouse pad.-->

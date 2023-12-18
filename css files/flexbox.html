@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <style>
+        .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            /* flex-direction: column; */
+             /* flex-direction: row;  */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+             /* flex-wrap: wrap;  */
+            /* flex-wrap: nowrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* flex-flow: row wrap; */
+             /* justify-content: center;  */
+            /* justify-content: flex-end; */
+            /* justify-content: flex-start; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+              /* align-items: center;   */
+             height:300px ;
+             /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            /* align-items: baseline; */
+             align-items: stretch; 
+            /* align-content: center; */
+            /* align-content: flex-end; */
+            /* align-content: flex-start; */
+            /* align-content: space-around; */
+            /* align-content: space-between; */
+             /* align-content: stretch;  */
+            /* align-content: space-evenly; */
+        }
+        .container> div{
+            background-color: skyblue;
+            font-size: 30px;
+            margin:10px;
+            padding: 20px;
+            width:100px ;
+        }
+        .one{
+             order: 4; 
+            /* flex-grow: 1; */
+
+        }
+        .two{
+             order:2 ; 
+            /* flex-grow: 3; */
+            /* flex-basis: 400px; */
+
+        }
+        .three{
+            /* order: 3; */
+            /* flex-grow: 4; */
+            /* flex-shrink:2; */
+            /* flex-shrink: 0; */
+            flex:3 0 400px;
+
+        }
+        .four{
+            /* order: 1; */
+            /* flex-grow: 2; */
+            /* align-self: center; */
+            /* align-self: baseline; */
+            /* align-self:flex-start; */
+            align-self: flex-end; 
+            }
+    </style>
+</head>
+<body>
+    <div class="container">   <!--flex container or box  -->
+        <div class="one"style="">1</div>
+        <div class="two"style="">2</div>            <!--div 1,2,3,4 are called flex items               -->
+        <div class="three"style="">3</div>
+        <div class="four"style="">4</div>
+         <div class="five">5</div>
+          <div>6</div>  
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <!-- <div>10</div>
+        <div>11</div> -->
+        <!-- <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>17</div> 
+        <div>18</div>   -->
+        <!-- <div>19</div> 
+        <div>20</div> 
+        <div>21</div> 
+        <div>22</div> 
+        <div>23</div>  -->
+    </div>
+</body>
+</html>
+<!--Flex box :
+means its can change it position, aliment, inside contain.
+ It is flexible to change it property.
+ (1)display: flex;
+ jab flex box created karna hot ahe to flex container ko display property flex do.
+ is se jo div vertical dikh rahe the wo horizontaly agye.
+ ex:
+        .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+        }
+        .container> div{
+            background-color: skyblue;
+            font-size: 30px;
+            margin:10px;
+            padding: 20px;
+        }
+
+        There are some properties of flex box :
+        (1)flex-direction :
+        It well disaied the direction of flex items.
+        there is some values of flex-direction 
+        (a)column : each flex item are show vertical.
+        ex:
+        .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-direction: column;
+        }
+
+
+        (b)row: each flex item are show horizontaly.
+        It is dedault value of flex-direction.
+        ex:
+        .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-direction: row;
+        }
+
+
+        (c)column-reverse :
+        It will  reverse the flex items.(vertical)
+        ex:
+        .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-direction: column-reverse;
+        }
+
+
+        (d)row-reverse :
+        It will teverse the flex items.(horizontaly)
+         ex:
+         .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-direction: row-reverse;
+        }
+
+        (2)flex-wrap :
+        jab flex contaner me jada elemnts ho jaye to horizontal scrol bar laggya or flex box ke bahar bhi mere 
+        item jarah he to avioded this things we will use the flex-wrap. After using this the extra itmens come 
+        to nex line.
+        There is three value for flex-wrap.
+        (a)wrap : always use wrap value for flex-wrap.
+        ex;
+        .container{
+            display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-direction: row; 
+            flex-wrap: wrap;
+
+        (b)nowrap :It is default value.
+        ex:
+        .container{
+            display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-direction: row; 
+            flex-wrap:nowrap;
+
+         (c)wrap-reverse :
+         means reverse wrapning is made.
+         ex:
+         .container{
+            display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-direction: row; 
+            flex-wrap:)wrap-reverse;
+
+        (3)flex-flow : It is the shorthand property for flex-direction and 
+        flex-wrap.
+        ex:
+         .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+         }
+
+        (4)justify-content : flex items he use horizontal aline karne ke liye.
+        There is some values of justify-content;
+        (a)center :
+        ex:
+         .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            justify-content: center;
+         }
+
+         (b)flex-strat ;
+         ex:
+          .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            justify-content: flex-strat;
+          }
+
+          (c)flex-end :
+          ex:
+           .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            justify-content: flex-end;
+          }
+
+          (d)space-around : sabhi ke around same space reqired.
+          ex:
+           .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            justify-content: space-around;
+          }
+
+          (e)space-between :
+          ex:
+           .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            justify-content:space-between;
+          }
+
+          (f)space-evently :
+          ex:
+           .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            justify-content:space-evently;
+          }
+
+        (5)align-items :
+        flex item ko vertically aline kar tah he.
+        There is some values of align-items.
+        (a)center :style="font-size: 20px;" 
+        style="font-size: 30px;"
+        style="font-size: 40px;"
+        style="font-size: 60px;" is provide to div for to show this property.
+        ex:
+         .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            align-items: center;
+            height:300px ;
+         }
+
+         (b)flex-start :
+          ex:
+         .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            align-items: flex-start;
+            height:300px ;
+         }
+
+         (c)flex-end :
+          ex:
+         .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            align-items: flex-end;
+            height:300px ;
+         }
+
+         (e)stretch :It is by defaulf property.
+          ex:
+         .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            align-items: stretch;
+            height:300px ;
+         }
+
+         (f)baseline :flex item ke ander ki text ki base line m aline.
+         
+          ex:
+         .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            align-items:baseline;
+            height:300px ;
+         }
+
+       (6)align-content :
+       flex line ko aline kar ta he. In over example there is two flex line.
+       There is the some values of align-content.
+       (a)center :
+       ex:
+       .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            height:300px ;
+            align-content: center;
+       }
+
+       (b)flex-start :
+       ex:
+        .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            height:300px ;
+            align-content: flex-start;
+       }
+
+       (c)flex-end :
+       ex:
+        .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            height:300px ;
+            align-content: flex-end;
+       }
+
+       (d)space-around :
+       ex:
+        .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            height:300px ;
+            align-content: space-around;
+       }
+
+       (e)space-between :
+       ex:
+        .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            height:300px ;
+            align-content: space-between;
+       }
+
+       (f)space-evently :
+       ex:
+        .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            height:300px ;
+            align-content: space-evently;
+       }
+
+       (g)stretch :
+       ex:
+        .container{
+             display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            height:300px ;
+            align-content: stretch;
+       }
+
+ By adding both aline-items and justfly-items property use kar ke kisi bhi item ko 
+ flex box me center me lasakte he. 
+ ex:
+ .container{
+            display: flex; 
+            background-color: rgb(99, 31, 226);
+            flex-flow: row wrap;
+            justify-content: center; 
+            align-items: center; 
+            height:300px ;
+            align-content: stretch; 
+           }
+
+# Property for flex-items :-
+(a)Order : It is use to change the order of items.for example if we can 4 at first 
+and 1 at forth position then we use this.
+ex:
+.container> div{
+            background-color: skyblue;
+            font-size: 30px;
+            margin:10px;
+            padding: 20px;
+        }
+        .one{
+            order: 4;
+
+        }
+        .two{
+            order:2 ;
+
+        }
+        .three{
+            order: 3;
+
+        }
+        .four{
+            order: 1;
+
+        }
+
+        There is some value of order :
+        zero is the default value. If we can not provide the
+        value to item then its value is zero it means it comes first.
+        ex:  <div class="five">5</div> for this div we can not apply the 
+        order value because of that it come first.
+
+
+(b)flex-grow :It work in proportion mens one flex itme is how much greater than the another items.
+ex:
+.container> div{
+            background-color: skyblue;
+            font-size: 30px;
+            margin:10px;
+            padding: 20px;
+        }
+        .one{
+           flex-grow: 1;
+         }
+        .two{
+            flex-grow: 3;
+        }
+        .three{
+            flex-grow: 4;
+        }
+        .four{
+           flex-grow: 2;
+        }
+
+        The default value of flex-grow is zero.
+        flex one ki flex-grow value is one and flex four ki flex-grow vlaue is 2.
+        it means that four itmes ki width one itmes ke comparatively double hogi. 
+
+(c)flex-shrink :default value of flex-shrink is 1.for this we comment the  flex-flow: row wrap;
+then we apply align-items: sreatch.
+ex:
+ .three{
+           flex-shrink: 2;
+ }
+ flex-item three ki shrink vlaue  2 dihe it means bakio ki 
+ shrink value 1 he or flex-item three is ki vlaue double he.
+ jab width kam hogi to sab se pahale three shrink hoga.
+
+ yese vlaue agar zero di to;wo shrink nahi hota.
+ ex:
+ .three{
+           flex-shrink: 0;
+ }
+
+
+
+
+(d)flex-basis : Is use to give initial width to any flex items.
+means both jada space ho tho wo item jiti ham ne flex-basis ki jiti
+value di he uthi dega. jab space kam hogi to adject hoga.
+ex:
+.two{
+            flex-basis: 400px;
+    }
+
+(e)flex :It is the shorthand property for flex-grow, flex-shrink and flex-basis ki.
+ex:
+.three{
+           flex:3 0 400px;
+}
+flex-shrink and flex-basis are not use together put one zero or give default value.
+
+(f)align-self : wo kudako flex ke line aline karega.
+There is some value of align-self.
+(1)center :
+ex:
+.four{
+            align-self: center;
+    }
+
+(2)baseline :
+ex:
+.four{
+            align-self: baseline;
+    }  
+    
+(3)auto :default value
+ex:
+.four{
+            align-self: auto;
+        } 
+        
+ (4)flex-end and end : both are same.
+ ex:       
+.four{
+            align-self: flex-end;
+        } 
+
+(5)flex-start :
+ex:
+.four{
+            align-self: flex-start;
+        } 
+
+
+
+-->

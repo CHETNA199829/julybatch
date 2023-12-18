@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2d tramsformatio demo</title>
+    <style>
+       
+          div{background-color: blue;
+            top: 100px;
+            left: 100px;
+            height: 100px;
+            width: 300px;
+            border: 2px solid yellow;
+            color: aqua;
+            /* transform: translate(150px, 200px); */
+            /* transform: translateX(150px); */
+            /* transform: translatey(600px); */
+            /* transform: rotate(60deg); */
+            /* transform: rotate(-60deg); */
+            /* transform: scale(0.5,0.5); */
+            /* transform: scaleX(5); */
+            /* transform: scaleY(2); */
+
+        }
+          .demo{
+            transform: matrix(1,0.2,0,1,50,60);
+            /* transform: skew(30deg,40deg);
+            transform: skewY(40deg); */
+            /* transform: skewX(30deg); */
+             /* transform: rotate(60deg);  */
+              /* transform: rotate(-60deg);  */
+              /* transform: scale(2,3); */
+              /* ye div ki scale(width,height) means 2 X 50= 100px width hojayegi.
+              and height will become 3 X 100=300px */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="origainal">Translate example</div>
+    <br><br><br><br>
+    <div class="demo">translate example of scale</div>
+</body>
+</html>
+<!--Trasformation :
+There are two types of trasformation
+(1)2D-transformation
+(2)3D-transformation
+the work of these transformatio is to move or rotated or
+scale(means sized increase or decrease) or skew the element from 
+origainal postion.
+Transformation ke liye ak property use hoti he i.e
+trasform.It have multiple properties are as follows
+(i)translate :
+means uske origanal position se use move karna.
+ transform: translate();
+ translate ke open bracket me hame two values deni he
+ dono value px me dege first is horizontal sift and second is
+ vertical sift
+ In 2d trasformation it will take x-axis and y-axis
+ translate(x,y)
+ ex:
+  div{
+            background-color: blue;
+            height: 100px;
+            width: 350px;
+            border: 3px solid yellow;
+            color: aqua;
+            transform: translate(150px, 200px);
+        }
+There is again two versions of translate i.e.
+translatex and translatey :
+translatex can move horizantaly and translatey can move 
+verticaly.
+ex:
+(a)
+div{
+            background-color: blue;
+            height: 100px;
+            width: 350px;
+            border: 3px solid yellow;
+            color: aqua;
+            transform: translateX(150px);
+        }
+
+(b)
+ div{
+            background-color: blue;
+            height: 100px;
+            width: 350px;
+            border: 3px solid yellow;
+            color: aqua;
+            transform: translatey(600px);
+        }
+
+(2)transform: rotate():
+It will rotate the element in degree.
+ex:
+ div{
+            background-color: blue;
+            height: 100px;
+            width: 350px;
+            border: 3px solid yellow;
+            color: aqua;
+            transform: rotate(60deg);
+        }
+When we apply positive value of rotation then it will move clockwise.
+when we apply negative value of rotation then it will move anticlockwise.
+ex:
+ div{
+            background-color: blue;
+            height: 100px;
+            width: 350px;
+            border: 3px solid yellow;
+            color: aqua;
+           transform: rotate(-60deg);
+        }
+
+        or 
+        .demo{
+            /* transform: rotate(60deg); */
+              transform: rotate(-60deg); 
+        }
+
+(3)scale :
+It is use for to increase or decarease the height and width the element.
+  transform: scale(2,3); means
+ ye div ki origal height and width he wo change hogi
+  scale(width,height) means 2 X 50= 100px width hojayegi.
+  and height will become 3 X 100=300px
+  ex:
+  div{background-color: blue;
+            top: 100px;
+            left: 100px;
+            height: 200px;
+            width: 100px;
+            border: 3px solid yellow;
+            color: aqua;
+             transform: scale(0.5,0.5);
+  }
+
+  there is two value of scale that is 
+  scalex(width) and scaley(hight) :
+  scalex change the width only and scaley change the 
+  height only.  
+  ex;(a)
+   div{background-color: blue;
+            top: 100px;
+            left: 100px;
+            height: 200px;
+            width: 100px;
+            border: 3px solid yellow;
+            color: aqua;
+            transform: scaleX(5); 
+   }
+   yaha par width=5 x 100 =500
+
+   (b)
+div{background-color: blue;
+            top: 100px;
+            left: 100px;
+            height: 200px;
+            width: 100px;
+            border: 3px solid yellow;
+            color: aqua;
+            transform: scaleY(2);
+}
+height become height=2 X 200 = 600
+
+skew :
+skew(x,y),skewx, skewy
+ex:
+ .demo{
+            transform: skew(30deg,40deg);
+            transform: skewY(40deg);
+ }
+
+matrix :
+ye sari property ka combination hota he.
+ise jada use me nahi lete he.
+matrix(scaleX,skewY,skewX,scaleY,translateX,translateY)
+ex:
+ .demo{
+            transform: matrix(1,0.2,0,1,50,60);
+ }
+
+
+
+-->

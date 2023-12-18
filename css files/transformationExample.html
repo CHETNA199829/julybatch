@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transfomation demo</title>
+    <style>
+        div{
+            background-color: blue;
+            height: 100px;
+            width: 300px;
+            border: 2px solid black;
+            color: wheat;
+            transform: translate(50px, 200px);
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div ></div>
+    
+    
+</body>
+</html>
+<!-- Transform :
+(1)translate :
+origanal position se change karnekeliy.
+ex:
+ div{
+            background-color: blue;
+            height: 100px;
+            width: 300px;
+            border: 2px solid black;
+            color: wheat;
+            transform: translate(50px, 200px);
+        }
+   
+(2)rotaion :
+ex:
+div{
+            background-color: blue;
+            height: 100px;
+            width: 300px;
+            border: 2px solid black;
+            color: wheat;
+            transform: translate(50px, 200px);
+            transform: rotate(90deg);
+        }
+
+        here we can use the transition property. by using tansition property
+        we can change thiming of rotation and trnaslate.
+        ex:
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            border:1px solid black;
+            transition:width 2s, height 3s, transform 5s;
+            transition-delay:2s ;
+            transition-timing-function: linear; 
+        }
+        div:hover{
+            width: 600px; /*psuedo-class*/
+            height: 400px;
+            transform: rotate(90deg);
+        }
+use in transition.
+-->

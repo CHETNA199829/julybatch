@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Form Events</title>
+</head>
+<body>
+    <form action="" onsubmit="alert('form submitted')" 
+    onreset="console.log('form reset')">
+        <input 
+        type="text"
+         name="" 
+         id="" 
+         onblur="console.log('Inpurt field is blurred now')"
+         onfocus="console.log('input field is focused')">
+     
+   <!--<script>
+        function blurFn(){
+            console.log("Inpurt field is blurred now");
+        }
+    </script>*/-->
+    <br>
+    <hr>
+    <br>
+    <label for="">onchage example</label>
+    <input type="text" name="" id="" value="sample"
+    onchange="console.log('value chaged')"
+    oninput="console.log('user added input')">
+<br>
+<hr>
+<br>
+<input 
+type="text"
+name="fname"
+value="sample check"
+title="numbers and special chacters are not allowed"
+pattern="^[A-Za-z\s]+$"
+oninvalid="console.log('invalid value')"
+onselect="console.log('value selected')">
+<br>
+<label for="">search</label>
+<input type="search" name="ssss" id="" onsearch="alert('value search')">
+<br>
+<input type="submit" value="submit">
+<input type="reset" value="reset">
+</form>
+</body>
+</html>
+<!-- event: web page pe jo bhi action hoti he(action yane 
+    kahi par mouse lejan click karna etc.)ye sab action htmal 
+event se detect ho skti he. events kam he ki web page pe
+jobhi action ho use detect karna. detect karne ke bad us 
+event ke sath jobhi java script ka code associated ho usko associate
+karna.-->
+<!--(1)form events : onblur event he jo i/p box me click karne ke bad 
+bahar click kiya to i/p field blur ho jata he.
+onblur ke ander javascrip ka code blurFn() diya 
+or form tag ke bad hame script tag use kiya jo i/p field 
+blur hone ke bad messege degi/call karegi.->
+
+<!-onblur="console.log('Input field is blurred now')" yesa bhi likh sakte he 
+    agar script tag nahi likha to
+OR
+
+onblur="blurFn()"
+</form>
+<script>
+        function blurFn(){
+            console.log("Inpurt field is blurred now");
+        }
+    </script>
+yesa bhi likh sakte he
+    
+    onfocuse: event ye i/p field ko focuse kar ne keliye 
+    use hota he consol me call hota he.
+     
+    ak input field par diffrent diffrent events ho sakte
+    ak se jada events de sakte he.
+    
+    onchange event: value="sample" dali ye difolt value dali
+    jab is me chage hoga tab value chage ye call ho consol me.
+    onchage event fayar/trigar hua yesa bolte he.
+    
+    oninput event: jita bhi ap i/p de rahe ho 
+    wo sab fayar hota he.har ak click par backsapce par bhi 
+    fayar hota he. total value not chaged so onchage event not performed
+    
+    oninvalied event: it is use to give call me invalide value is fillup in the
+    i/p field. here patten atribute should be use because it give the proper information 
+    about i/p filed to user.or we can use requied atribute,maxlenght,
+    means jab oninvalied event likhte he to use check kar nekeliye 
+    koina koichye.
+    
+    onsubmit event: ise ham form ke sath bhi likh sakte ho
+    ya input ke sath bhi likh sakte ho. ye pure form ko submit karne ka kam karta he.
+    onsubmit="console.log('form submit')" ye thode der keliye dikhta he or chala jata he.
+    onsubmit="alert('form submit')" ye bhi de sakte he is se wo thde der keliye call kar 
+    kartha he.
+    
+    onreset event: ye reset kar ne ke kam ata he consol me call hota he.
+    
+    onselected event :jab ham i/p ke ander ki value select karte he tab 
+    trigar hota he.
+    
+    onserch event :kis kis brawser  enter kerne ke bad trigar ho raha he->

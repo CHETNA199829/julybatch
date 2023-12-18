@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Padding demo</title>
+    <style>
+      .div1 {
+        /* height: 100px;
+            width: 200px; */
+        background-color: red;
+        border: 3px solid yellow;
+        /* padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px; */
+        /* padding:15px 20px 15px 20px; */
+        /* padding:15px 20px 25px; */
+        /* padding: 15px 25px; */
+        /* padding:30px; */
+        padding: 10%;
+      }
+      .inherit {
+        background-color: aqua;
+        border: 4px solid;
+        padding: 30px;
+      }
+      p {
+        background-color: blue;
+        padding: inherit;
+      }
+      .div3 {
+        width: 300px;
+        background-color: brown;
+      }
+      .div4 {
+        width: 300px;
+        padding: 40px;
+        box-sizing: border-box;
+        background-color: rgb(226, 43, 144);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit dolores
+      ipsam assumenda a, modi repellat fuga pariatur, molestias, cumque at quo.
+      Ab a quam dolore odio distinctio velit fuga nihil. Lorem ipsum dolor, sit
+      amet consectetur adipisicing elit. Impedit dolores ipsam assumenda a, modi
+      repellat fuga pariatur, molestias, cumque at quo. Ab a quam dolore odio
+      distinctio velit fuga nihil.
+    </div>
+    <br/><br/>
+    <div class="inherit">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit
+        dolores ipsam assumenda a, modi repellat fuga pariatur, molestias,
+        cumque at quo. Ab a quam dolore odio distinctio velit fuga nihil. Lorem
+        ipsum dolor, sit amet consectetur adipisicing elit. Impedit dolores
+        ipsam assumenda a, modi repellat fuga pariatur, molestias, cumque at
+        quo. Ab a quam dolore odio distinctio velit fuga nihil.
+      </p>
+    </div>
+    <br /><br />
+    <div class="div3">
+      dolore odio distinctio velit fuga nihil. Lorem ipsum dolor, sit amet
+      consectetur adipisicing elit. Impedit dolores ipsam assumenda a, modi
+      repellat fuga pariatur, molestias, cumque at quo. Ab a quam dolore odio
+      distinctio velit fuga nihil.
+    </div>
+    <br /><br />
+    <div class="div4">
+      dolore odio distinctio velit fuga nihil. Lorem ipsum dolor, sit amet
+      consectetur adipisicing elit. Impedit dolores ipsam assumenda a, modi
+      repellat fuga pariatur, molestias, cumque at quo. Ab a quam dolore odio
+      distinctio velit fuga nihil.
+    </div>
+  </body>
+</html>
+<!--padding :
+is the distance of contain area and border.
+there is some padding as followes:
+(1)padding-top :
+ex:
+ padding-top: 15px;
+ ye padding top se lagyega.
+
+ (2)padding-bottom :
+ ex:
+ padding-bottom: 15px;
+ye padding bottom se lagyega.
+
+(3)padding-left :
+ex:
+padding-left: 20px;
+ye padding left side se lagyega.
+
+(4)padding-right :
+ex:
+padding-right: 20;
+ye padding right side se lagyega.
+
+(5)shorthand property for padding :
+this for four value, three value, two value.
+(a)for foure value :
+padding:top right bottom left
+ex:
+padding:15px 20px 15px 20px;
+
+(b)for three value :
+padding:top right left bottom
+ex:
+padding:15px 20px 25px;
+
+(c)for two value :
+padding:top bottom right left
+ex:
+padding: 15px 25px;
+
+(e)if we apply one value it will apply to all.
+padding:top bottom right left
+padding:30px;
+
+padding contain three values :
+px, %(ye normaly use nahi hota), inherit. parent tag che property chiled ko lagane keliye use.
+ex:
+(a) padding: 10%;
+(b)inherit :
+ex:
+ .inherit{
+            background-color: aqua;
+            border: 4px solid;
+            padding: 30px;
+        }
+        p{
+            background-color: blue;
+            padding: inherit;
+        }
+
+(6)box-sizing : means the padding add karne ke bad width bade nahi.
+isliye box-sizing use karte. contain area adject hojata he.
+ex:
+.div4 {
+        width: 300px;
+        padding: 40px;
+        box-sizing: border-box;
+        background-color: rgb(226, 43, 144);
+      }
+
+
+
+-->

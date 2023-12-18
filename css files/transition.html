@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition demo</title>
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            border:1px solid black;
+            transition:width 2s linear 2s, height 3s linear 2s, transform 5s, ease 10s;
+            /* transition-delay:2s ; */
+            /* transition-timing-function: ease; */
+             /* transition-timing-function: linear;  */
+            /* transition-timing-function: ease-in; */
+            /* transition-timing-function: ease-out; */
+            /* transition-timing-function: ease-in-out; */
+        }
+        div:hover{
+            width: 600px; /*psuedo-class*/
+            height: 400px;
+            /* transform: rotate(90deg); */
+            transform: translate(100px, 300px);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>
+<!--transition :
+    (1)
+mens ham ne hover karne ke bad width change ho rahi he wo kuchh sec be ho rahi he.
+ise ham control kar sakte he he.je hover 1 sec me horah he to hame hover 2sec me lagna he
+to ham laga sakte he.for that we use transition property.
+  ex:
+ div{
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            border:1px solid black;
+            transition:width 2s;
+        }
+        div:hover{
+            width: 400px; /*psuedo-class*/
+        }
+
+        transtion ye multipal properties ko de sakte he.
+        ex: width, height
+         transition:width 2s, height 3s;
+
+         (2)transition-delay :
+         means hover karneke ke pahale wo 2 sec rukega or pjir hover karega.
+         ex:
+         transition-delay:2s;
+
+        (3)transition-timing-function :
+        jab haver karne ke bad div ki height and width pahle slow then fast and then angain slow 
+        hoti he ise change karne keliye transition-timing-function is use.
+        there are some values of transition-timing-function.
+        (a)ease :
+        It is the default value of the transition-timing-function.
+        means starting-slow midal-fast end-slow
+        ex:
+        div{
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            border:1px solid black;
+            transition:width 2s, height 3s;
+            transition-delay:2s ;
+            transition-timing-function: ease; 
+        }
+
+        (b)linear :
+        It means strating se to end tak speed same rahega.
+        means it will take uniform time thought out.
+        ex:
+        div{
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            border:1px solid black;
+            transition:width 2s, height 3s;
+            transition-delay:2s ;
+            transition-timing-function:linear;
+        }
+
+        (c)ease-in :
+        It means strating will be slow then medal and end speed are same(uniform)
+        ex:
+         div{
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            border:1px solid black;
+            transition:width 2s, height 3s;
+            transition-delay:2s ;
+            transition-timing-function:ease-in;
+        }
+
+        (d)ease-out :
+        It means strating and midal have uniform speed  and end have slow speed.
+        ex:
+         div{
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            border:1px solid black;
+            transition:width 2s, height 3s;
+            transition-delay:2s ;
+            transition-timing-function:ease-out;
+        }
+
+        (e)ease-in-out :
+        It is similar to ease starting-slow, midle-fast, end-slow.
+        ex:
+         div{
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            border:1px solid black;
+            transition:width 2s, height 3s;
+            transition-delay:2s ;
+            transition-timing-function:ease-in-out;
+        }
+
+shorthand property for transition is :
+transition: width timing, transtion-timing-function,height,transform timing
+ex:
+ div{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            border:1px solid black;
+            transition:width 2s linear 2s, height 3s linear 2s, transform 5s, ease 10s;
+ }
+-->   

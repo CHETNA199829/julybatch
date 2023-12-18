@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>borders</title>
+    <style>
+        .one{
+            height: 100px;
+            width: 200px;
+             /* border-style: solid; */
+            /* border-width: thin; */
+            /* border-width: medium; */
+            /* border-width: thick; */
+             border-width: 50px; 
+            /* border-width:5px 10px 15px 20px; */
+            /* border-width:5px 10px 15px; */
+       /* border-width:5px 10px; */
+       /* border-color: red; */
+       /* border-color:red green blue purple ; */
+       /* border-color:red green blue; */
+       /* border-color:red green; */
+       
+       border: 15px solid crimson;
+/* shorthand border: widh style color */
+        }
+        .dotted{
+            border-style: dotted;
+        }
+        .dashed{
+            border-style: dashed;
+        }
+        .double{
+            border-style: double;
+        }
+    .groove{
+        border-style: groove;
+    }
+    .ridge{
+        border-style: ridge;
+    }
+    .inset{
+        border-style: inset;
+    }
+    .outset{
+        border-style: outset;
+    }
+    .none{
+        border-style: none;
+    }
+    .hidden{
+        border-style: hidden;
+    }
+    button:hover{
+        border-style: hidden;
+    }
+    .hidden1{
+        border-style: dotted;
+    }
+    .mixed{
+        /* border-style: top right bottom left */
+        border-style: solid dotted ridge none;
+    }
+    .mixed1{
+        /* border-style:top right&left bottom */
+        border-style: solid dotted ridge;
+    }
+    .two{
+        height: 100px;
+        width: 200px;
+        border-color: purple;
+        border-width: 15px;
+        /* border-style: solid; */
+        /* border-top-style:dotted ; */
+        border-top-style: solid;
+        border-left-style: dashed;
+        border-right-style: groove;
+
+        border-right-color: blue;
+        border-left-color: red;
+     }
+     .three{
+        border: 15px solid orange;
+        border-radius: 20px;
+     }
+     .four{
+        height: 200px;
+        width: 100px;
+        border:15px solid green;
+        border-radius: 30%;
+        padding:5px ;
+        
+     }
+    
+    </style>
+</head>
+<body>
+    <div class="one">sample border solid</div>
+    <br>
+    <div class="dotted">sample border dotted</div>
+    <br>
+    <div class="dashed">sample border dashed</div>
+<br>
+<div class="double">sample border double</div>
+<br>
+<div class="groove">sample border groove</div>
+<br>
+<div class="ridge">sample border ridge</div>
+<br>
+<div class="inset">sample border inset</div>
+<br>
+<div class="outset">sample border outset</div>
+<br>
+<div class="none">sample border none</div>
+<br>
+<button class="none">letter</button>
+<br>
+<button class="hidden">hidden</button>
+<br>
+<button class="hidden1">hidden1</button>
+<br><br>
+<div class="mixed">sample border mixed</div>
+<br><br>
+<div class="mixed1">sample border mixed1</div>
+<br><br>
+<div class="two">sample border solid two</div>
+<br><br>
+<div class="three">sample border solid three</div>
+    <br>
+<div class="four">sample border solid four</div>
+<br>
+</body>
+</html>
+<!--Borders : 
+you can provide border to all element or tags.
+
+(1)Border style : 
+(a)solid border :
+ex:
+.one{
+            border-style: solid;
+
+(b)dotted border :
+ex:
+.dotted{
+            border-style: dotted;
+        }
+
+(c)dashed border :
+ex:
+.dashed{
+            border-style: dashed;
+        }
+
+(d)double border :
+ex:
+.double{
+            border-style: double;
+        }
+
+(e)ridge :
+ex:
+.ridge{
+        border-style: ridge;        
+
+(f)groove border :
+ex:
+.groove{
+        border-style: groove;
+    }
+
+(g)inset border :
+ex:
+ .inset{
+        border-style: inset;
+    }
+
+(h)outset border :
+ex:
+.outset{
+        border-style: outset;
+    }
+
+(i)none border :
+ex:
+.none{
+        border-style: none;
+    }
+
+(j)hidden border :
+ex:
+.hidden{
+        border-style: hidden;
+    }
+    and
+hawar karne ke bad button ki border remove karni he to
+ex:
+ button:hover{
+        border-style: hidden;
+    }
+    (here we use psudo-class haver kiya he.)
+  .hidden1{
+        border-style: dotted;
+    }
+       or we can also apply dotted lines etc.
+
+(k)mixed border :
+ex
+.mixed{
+        /* border-style: top right bottom left */
+        border-style: solid dotted ridge none;
+    }
+    
+    agar hamne three value provide ki to ye 
+    top right&left bottom yese ayegi.
+ex:
+.mixed1{
+        /* border-style:top right&left bottom */
+        border-style: solid dotted ridge;
+    }
+    and agra do li to top and bottom ko same hogi and
+    left and right ko same hogi.
+
+(2)border width property :
+ex:
+ .one{
+            border-style: solid;
+            border-width: thin;
+        }
+        there is pre define values
+        (a)thin
+(b)medium :
+ex:
+  border-width: medium;
+
+  (c)thick :
+  ex:
+   border-width: thick;
+
+   (d)we can provide the as we like values
+   ex:
+    border-width: 50px;
+
+    (e)je se border-style ke liye tha wese hi is keliye bhi he.
+    agra ham four diffrent values provide kare ge to hame four border diffrent
+    milegi. 
+    ex:
+     border-width:5px 10px 15px 20px;
+
+     if we provide three values the it will take
+ top right&left bottom values.
+ ex:
+ border-width:5px 10px 15px;
+
+ if we provide two values the it will take right-left and top-bottom
+ values.
+ ex:
+  border-width:5px 10px;
+
+  (3)Border color :
+  jite bhi color ke vareation dekhehe wo sab ham use kar sakte he.
+  rgd,obacity,hrl etc.
+  ex:
+   border-color: red;
+
+   same as above: for four diffrent color
+ex:
+border-color:red green blue purple ;
+ 
+for three diffrent color border :
+ex:
+border-color:red green blue;
+
+for two diffrent color border :
+ex:
+ border-color:red green;
+ border-color:red green;
+
+ (4)border-top-style : 
+ by this we can provide single side border.
+ex:
+ border-top-style:dotted ;
+
+ isse different right ans left :
+ex: 
+ border-left-style: dashed;
+ border-right-style: groove;
+
+ or ham diffrent color border bhi provide kar sakte he.
+ ex:
+  border-right-color: blue;
+        border-left-color: red;
+        
+        and we can provide ower individual property.
+
+ (5)shorthand property for border :
+border:width style color this sequence we have to follow.
+we should apply style because border ko style nahi di tho kuchnahi dikehga.
+ex:
+ border: 15px solid crimson;
+
+ (6)bordere redius :
+ agar border circular chye hogi to iska use hota he.
+ex:(1)
+.three{
+        border: 15px orange;
+        border-radius: 20px;
+     }
+     border-radius ye pecentage me bhi de sakte he.
+     par ye jada effect karta he.
+     (isse height and width nahi provide nahi kihe isliye yesa dikh rahahe)
+ex:(2)
+.four{
+        height: 200px;
+        width: 100px;
+        border:15px solid green;
+        border-radius: 30%;
+        
+     }
+
+     BOX MODEL STRUCTURE :
+     jab ap koi bhi html tag likteho or wo jab browser par render ho jatahe.
+     after rending contain some structure creat hota he. hame ye inspect karne ke 
+     bad diktha he.
+     ______________________________________
+    |   ________________________________   |                                |    
+    |   | border                       |   |
+    |   |   -----------------------    |   |                   |   |
+    |   |   |  _______________    |    |   |
+    |   |   |  |______________|   |    |   |
+    |   |   |                     |    |   |
+    |   |   ----------------------     |   |                   |   |
+    |   |______________________________|   |                                  |
+    |______________________________________|
+    
+is me sab se middle me jo he use contained area kahte he.
+div par click kiy to div ka box mobble dikhega and paragraph par 
+click kiya to paragraph ka box mobble strutrue dikhega.
+box structure ye har html tag par hota he layout creat karne keliye.
+
+after that padding : is distance between border and contain area.
+ex:
+padding:5px ;
+
+next is border : line around the contain area and padding.
+jab tak ap border ki koi property aplly nahi karo tabtak wo nahi dikegi 
+width,height,color etc.
+
+next is margin : border ke bahar ka jita bhi area hoga wo margine.
+ham ne abhi kisi ko bhi margin apply nahi ki he.
+  
+
+
+
+
+
+
+
+
+
+
+-->

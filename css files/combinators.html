@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        div p{
+            color: blue;
+            font-size: 25px; 
+        }
+        div1>p{
+            color: rgb(207, 207, 35);
+            font-size: 30px;
+        }
+        /*div+p{
+            color: rgb(241, 101, 155);
+            font-size: 50px;
+        }*/
+        div~p{
+            color: red;
+            font-size: 70px;
+        }
+
+    </style>
+</head>
+<body>
+    <p>para 0</p>
+    <div class="div 1">
+        <p>para 1</p>
+        <p>para 2</p>
+        <div class="div 2">
+          <p>para 3</p>
+          <p>para 4</p>
+        </div>
+      </div>
+
+<div1 class="div 3">
+    <p>para 5</p>
+    <p>para 6</p>
+    <div class="div 4">
+      <p>para 7</p>
+      <p>para 8</p>
+    </div>
+  </div1>
+  <p>para 9</p>
+  <p>para 10</p>
+    
+</body>
+</html>
+<!--selectors that are created using the relation between
+elements.
+there are four types of selectors:
+(1)descendent: (sapace)
+ <style>
+        div p{
+            color: blue;
+            font-size: 25px; 
+        }
+    </style>
+    yaha par div p ,div or p ke bich space di he.
+    div ke har ak descendent ko ye styleing provide hogi.
+    yane para 1,para 2,para 3,para 4,etc. in sabko stying 
+    apply hogi. yaha par para 0 ko styling provide nahi hue
+    koki wo dev ke upar likha he.
+
+(2)chilid: (>)
+div1>p{
+            color: rgb(207, 207, 35);
+            font-size: 30px;
+            yaha par sirf div1 ke child ko styleing apply
+            hogi.
+
+(3)adjecent siblings: (+)
+div+p{
+            color: rgb(241, 101, 155);
+            font-size: 50px;
+            yahaver sir siblings ko styling apply hogi.
+            ex: para 9 ko stying apply hue. yaha pr div ke 
+            siblings para 9 and para 10 he in me se sirf div ke 
+            first sibling ko stying provide hogi because of adjecent sibling.
+
+(4)general sibling: (~ tilde)
+div~p{
+            color: red;
+            font-size: 70px;
+        }
+means sabhi sibling ko stying apply hogi.
+ex:para9, para10-->

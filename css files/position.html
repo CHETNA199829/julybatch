@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .div1 {
+        background-color: aqua;
+        height: 100px;
+        width: 300px;
+        border: 3px solid green;
+        /* top: 300px; */
+        top: 10px;
+        left: 100px;
+        /* position: static; */
+         position: relative;
+        
+      }
+      .fixedExample{
+        background-color: rgb(255, 0, 149);
+        height: 100px;
+        width: 300px;
+        border: 3px solid green;
+        /* top: 300px;
+        left: 100px; */
+        bottom: 0;
+        right: 0;
+       position: fixed;
+      }
+      .absolutExample{
+        background-color: blueviolet;
+        height: 200px;
+        width: 400px;
+        border: 3px solid yellow;
+        position: relative;
+        
+      }
+      .innerdivabsolut{
+        background-color: rgb(43, 226, 83);
+        height: 100px;
+        width: 100px;
+        border: 3px solid rgb(255, 0, 13);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore
+      ipsum laboriosam magnam recusandae in necessitatibus iste neque quae ipsa.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore
+      ipsum laboriosam magnam recusandae in necessitatibus iste neque quae ipsa.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore
+      ipsum laboriosam magnam recusandae in necessitatibus iste neque quae ipsa.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore
+      ipsum laboriosam magnam recusandae in necessitatibus iste neque quae ipsa.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore
+      ipsum laboriosam magnam recusandae in necessitatibus iste neque quae ipsa.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore
+      ipsum laboriosam magnam recusandae in necessitatibus iste neque quae ipsa.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore
+      ipsum laboriosam magnam recusandae in necessitatibus iste neque quae ipsa.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore
+      ipsum laboriosam magnam recusandae in necessitatibus iste neque quae ipsa.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore
+      ipsum laboriosam magnam recusandae in necessitatibus iste neque quae ipsa.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore
+      ipsum laboriosam magnam recusandae in necessitatibus iste neque quae ipsa.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore
+      ipsum laboriosam magnam recusandae in necessitatibus iste neque quae ipsa.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore
+      ipsum laboriosam magnam recusandae in necessitatibus iste neque quae ipsa.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tempore
+      ipsum laboriosam magnam recusandae in necessitatibus iste neque quae ipsa.
+      Officia culpa impedit repellendus soluta accusamus beatae ut? Saepe, est.
+    </p>
+    <div class="div1">This is div</div>
+    
+    <div class="fixedExample">this is the example of fixed position</div>
+  <br><br>
+    <div class="absolutExample">
+        <div class="innerdivabsolut"></div>
+    </div>
+</body>
+</html>
+<!--we have five value of potioning property are as follow with this 
+    five property we can use top,left,right,bottom prpperty use.
+static,relative,fixed,absolute,sticky ye property ke sath top,left,right,bottom
+ye property use karni pad ti he agar ham top:100px sirf ye use kare ge to to wo 
+work nahi karega.
+
+(1)static :
+this is by defualt propety of html element.
+static value agra hamne di he to uspar top,left,right,bottom
+is ka kuchh bhi effect nahi hoga.
+ex:
+ div{
+            background-color: aqua;
+            height: 100px;
+            width: 300px;
+            border: 3px solid green;
+            top: 100px;
+            position: static;
+        
+        }
+
+(2)relative :
+rlavive property lagarkar ham postion change kar sakte he.
+ex:(a)
+ div{
+            background-color: aqua;
+            height: 100px;
+            width: 300px;
+            border: 3px solid green;
+            top: 300px;
+            position: relative;
+        
+        }
+        (b)
+          div{
+            background-color: aqua;
+            height: 100px;
+            width: 300px;
+            border: 3px solid green;
+            top: 300px;
+            left: 400px;
+            position: relative;
+        
+        }
+
+
+
+(3)fixed :
+ye ap ke view port ke hisab se measser karta he.
+view port means screen size ke hisab se.
+ye original potions se reference nahi lega.
+ex:
+.fixedExample{
+        background-color: rgb(255, 0, 149);
+        height: 100px;
+        width: 300px;
+        border: 3px solid green;
+        top: 300px;
+        left: 100px;
+       position: fixed;
+      }
+(4)absolute :
+It will take position according to ancestor(ancestor means kisibhi html
+tag ka parent ke hisab se handel karega. )
+parent acoording potion diside karta he.
+ex:
+.absolutExample{
+        background-color: blueviolet;
+        height: 200px;
+        width: 400px;
+        border: 3px solid yellow;
+        position: relative;
+        
+      }
+      .innerdivabsolut{
+        background-color: rgb(43, 226, 83);
+        height: 100px;
+        width: 100px;
+        border: 3px solid rgb(255, 0, 13);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+Rule : agar apne absoult position apply ki hogi to uske parent ki 
+position hamesha relative honi chaye.nahi to hani chalega wo code.
+agra hamne parent nahi diya to absoult behave like fixed.
+
+(5)sticky :
+it means wo ak jage par jakr ruck jayega.
+It is change acoording to schrolling.
+ex:
+for this we creat new file i.e. sticky.html
+
+-->

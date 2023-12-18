@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d transformation</title>
+    <style>
+       
+        div{background-color: blue;
+         height: 100px;
+          width: 300px;
+          border: 2px solid yellow;
+          color: aqua;
+        
+      }
+        .demo{
+         /* transform: rotateX(30deg); */
+         /* transform: rotateY(340deg); */
+         /* transform: rotateZ(50deg); */
+         transform: rotate3d(0,1,0,45deg);
+         /* transform: translateX(100px); */
+         /* transform: translateY(120px); */
+         /* transform: translateZ(300px); */
+         /* transform: translate3d(100,120,300); */
+      }
+      </style>
+</head>
+<body>
+    <div class="origainal">Translate example</div>
+    <br><br><br><br>
+    <div class="demo">translate example of scale</div>
+</body>
+
+</html>
+<!--2d transfomation me jesi property thi wesihi isme bhi rahegi.
+
+
+3d Transformation :
+
+transform: rotateX, rotateY, rotateZ ye thire values dekhi.
+ ex:
+ transform: rotate3d(0,1,0,45deg);
+ me three coordinate dena padega or ak point rotation kae liye fix kar na pade ga.
+
+ transform:translate:
+original position se use sift karna.
+transalateX, transalteY, translateZ.
+ye thino ko combine property he translate3d(x,y,z)
+
+scale :
+scaleX,scaleY,scaleZ ye height and width increase kar ne kkeliye.
+ye 3d me nahi dikega.
+
+skewZ nahi he.
+
+-->

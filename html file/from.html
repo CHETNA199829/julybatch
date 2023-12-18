@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            console.log('range changes');
+    let range= document.getElementById('ratings');
+    console.log(range.value);
+    }
+    </script>
+</head>
+<body>
+<h2>From</h2>
+    <form action="./seversidefile" method="get">
+        <legend>Personal detels</legend>
+        <fieldset>
+        <label for="First name">first Name:</label>
+        <input type="text" id="First name" name="fname" 
+        placeholder="Enter your name" readonly>
+         <br><br>
+         <label for="father name">father name:</label>
+         <input type="text" id="father name" name="father " pattern="[A-Za-z\s]+$" autocomplete="off">
+         <br><br>
+         <label for="midal name">midal name:</label>
+        <input type="text" id="midal name" name="midle" size="60"
+         maxlength="5" title="maximum 5 charecters allow" required>
+        <br><br> 
+        <label for="Last name">last Name:</label>
+        <input type="text" id="Last name" name="lname" 
+        placeholder="Enter your last name" value="patil" onchange="console.log('value change');" 
+       disabled/>
+    </fieldset>
+    <br><br>
+    <fieldset>
+    <label for="email">Email:</label>
+        <input type="email" id="email" name="mail"
+        value="abcd@gmil.com" readonly/>
+       <br><br>
+        <label for="password">password:</label>
+        <input type="password" id="pass" name="password" required="">
+    <br><br>
+    <label for="female">Female</label>
+    <input type="radio" name="gender" id="female" value="female" >
+    <label for="male">male</label>
+    <input type="radio" name="gender" id="male" value="male" >
+    <label for="other">other</label>
+    <input type="radio" name="gender" id="other" value="other" > 
+    <br><br>
+    <br><br>
+    <label for="10th certificate">10th certificate</label>
+    <input type="radio" name="Document 1" id="10th certificate" value="10th certificate" >
+</fieldset>
+    <label for="adharcard">adharcard</label>
+    <input type="radio" name="Document 2" id="adharcard" value="adharcard" >
+    <label for="pancard">pancard</label>
+    <input type="radio" name="Document 3" id="pancard" value="pancard" > 
+    <br><br>
+    select the hobbies:
+    <br><br>
+    <input type="checkbox" name="Reading" id="checkbox 1">
+    <label for="checkbox 1">Reading</label>
+    <br><br>
+    <input type="checkbox" name="writting" id="checkbox 2">
+    <label for="checkbox 2">writting</label>
+    <br><br>
+    <input type="checkbox" name="Dancing" id="checkbox 3">
+    <label for="checkbox 3">Dancing</label>
+    <br><br>
+    <input type="checkbox" name="Coding" id="checkbox 4">
+    <label for="checkbox 4">Coding</label>
+    <br><br>
+    <input type="checkbox" name=">Racing" id="checkbox 5">
+    <label for="checkbox 5">Racing</label>
+    <br><br>
+    <label for="colour">select color:</label>
+    <input type="color">
+    <br><br>
+    <label for="date">slect date</label>
+    <input type="date" name="date" id="date" min="2009-01-02" max="2015-01-01"/>
+    <br><br>
+    <label for="datetime">select datetime</label>
+    <input type="datetime" name="datetime" id="datetime">
+    <br><br>
+    <label for="datetime-local">select datetime</label>
+    <input type="datetime-local" name="datetime" id="datetime" 
+    autofocus>
+    <br><br>
+    <label for="file">select file 1:</label>
+    <input type="file" name="files" id="files" multiple>
+    <br><br> 
+    <label for="file">select file:</label>
+    <input type="file" name="files" id="file">
+   <br><br>
+   <input type="hidden" name="roll" value="123">
+  <br><br>
+   <label for="quantity">slect number</label> 
+   <input type="number" name="quantity" id="quantity" max="10">
+   <br><br>
+   <label for="dozon">dozon</label>
+  <input type="number" name="dozon" id="dozon" step="5">
+   <label for="ratings">give the rating from 0-5</label>
+   <input type="range" name="ratings" id="ratings" min="0" max="5"
+   value="3" onchange="check()">
+   <br><br>
+   <label for="telephone">telephone number:</label>
+   <input type="telephone" name="telephone" id="telephone" 
+   pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" title="follow the formate as 123-45-678"> <!--we call it regex or regular expression-->
+   <br><br>
+   <label for="url"> enter url</label>
+   <input type="url" name="url" id="url">
+   <br><br>
+   <input type="image" src="./assets/seven hores.jpg" name="image" height="40" width="30">
+   <br><br>
+   <label for="state">select your state</label>
+   <select name="state" id="state" size="2">
+    <!--<option value="maharastra">--select state--</option>-->
+    <option value="maharastra">maharastra</option>
+    <option value="jamu kashmir">jamu kashmir</option>
+    <option value="goa">goa</option>
+    <option value="madhy prdesh">madhy prdesh</option>
+    <option value="uttrpredsh">uttrpredesh</option>
+    <option value="tamidnaydu" selected>tamidnaydu</option>
+</select>
+<br><br>
+<label for="velleg">select your state</label>
+   <select name="state" id="state" multiple>
+    <option value="warud">warud</option>
+    <option value="gawewaw">gawewaw</option>
+    <option value="jalna">jalna</option>
+    <option value="kud">kud</option>
+    <option value="gawe">gawe</option>
+    <option value="pusla">pusla</option>
+</select>
+<br><br>
+<label for="address">address</label>
+<textarea name="" id="" cols="30" rows="10">add a address</textarea>
+<br><br>
+<input list="skills" name="skills">
+<datalist id="skills">
+    <option>c++</option><!--yesebhil
+     likh sakte he it is empty kar ke bhi dal sakte he-->
+    <option value="c">c</option>
+    <option value="java">java</option>
+    <option value="paython">paython</option>
+    <option value="dwaing">dwaing</option>
+    <option value="garening">garening</option>
+    <option value="shoping">shoping</option>
+</datalist>
+
+   <input type="submit" value="submit"/>
+    <input type="reset" value="reset" disabled>
+    <input type="button" value="sample button" onclick="alert('this is alert')">
+    <input type="button" value="click twice" ondblclick="console.log('button clicked twice')
+    ">
+    <button onclick="alert('this is the alert')">sample button 2</button>
+</form>
+    
+    
+    <!--form: when you want to some input for web site through the 
+    user(ex: singup form,login form, ragestion form)sbhi forms pay of 
+collecting information from the user.
+form tage is the collection of number of input tag.
+ak from tag ke ander multiple input tag hoge.-->
+<!--input tag atribute:
+    (a)type: input kis type ka hoga ye bata ta he.
+    (b)id: me jo information lag rahi he user ki
+usaka box form hota he (ex: first nme)
+(c)name: ye javascript me kame ata he. is name atribute input type me jo bhi
+value daloge use collect kar nekeliye name atribute use hota he.  -->
+<!--lable tage: ye input tag ke sath ata he.
+input field me kya chye wo,kya dalna he ye batane ka kam
+ex: name:  dalna he.  -->
+<!--id: ki value unicq leni padti he is se koi problem nahi ayega-->
+<!--placeholder: ye value nahi he it is just a informary test-->
+<!--action atribute: jo from tage me he use me hame link 
+provide karni padti he jisme sari information jo user bhar raha he 
+wo jane keliye./.seversidefile ye file exist nahi karti isliye erro dikha raha he.
+method atribute:ise do value hoti he (a)get:get methos se user ki dali hui information
+url me data aaraha he.khuchh fark nahi padta.by defolt value get hogi
+(b)post:is me jo bhi information user ne dalihui he wo url me safe rahegi password nahi 
+dikega.-->
+<!--valu abrtibute: se ham by defolt valuen set kar sakte 
+    he.is se agar user ne koi value nahi dali hogi to ye value 
+submit ho jayegi.ex:abcd@gmil.com . value atribute is important for redio because 
+url par gender nahi samjme arahahe wo dikhna chiye is liye vlaue dena jaruhe.-->
+<!--name: me gender thino me diya is se hma in me se ak select kar sakte he .
+document me hamne numbers diye yan ham nam bhi different de sakte he is se ham thino 
+redio ko select kar sakte he.-->
+<!--check boxes: is me ham multipal chije select kar sakte he.yah par ham name kis differents le rahe har
+     iskeliye.-->
+     <!--button type: submit type ka kam submit karna he,
+    reset type ka kam reset karna he. in dono ke alawa jo 
+bhi dusrakam karwana hoga wo button type se kar sakte he.
+is button se koi bhi java script ka code exicute kar sakte ho.-->
+<!--onclick: ye event he
+ondoble click yese event hote he.
+input type= button and <button></button> same work karte he.-->
+<!--colour: ki url me numeric value submite hoti he.har ak colour ko koi 
+number rahta he.
+date: me date, datetime, datetime-local yes alag alag ke date palet use kar sakte he.
+File: file me ham sirf ak bar select kar sakte he. mutiple atribute lagane par ham multiple files
+select kar sakte he.(ctrl key ko press kar ke rakh ne se ham multiple files select kar sakte he.) --> 
+<!--input type=hidden: ye form me nahi show hoga jo bhi data user ne bhara he 
+wo user ko nahi dikhana he or wo file submit ho nichaye in that case we can use the hidden
+but this type not mach more use. inpect ke wajese is ki value koibhi change kar sakta he is liye
+ye jada use me nahi lete.-->
+<!--value atribute: initial value to i/p
+readonly atribute: box me ki value change nahi kar
+ sakte Ex:- email,first name. to make field uneditable.
+ disable: jis bhi i/p ko ap disable value lagate ho to 
+uski value send nahi hoti he. ex: last name ke patil value dali or disable use 
+kiya to wo value submite nahi hogi. jabtak pura form fill karke nahi hota
+tabtak submit button on nahi dikhegi is ke liye bhi iska use kiya jata he.
+size atribute: box ki size bad jati he size agar 60 dali to usame 60 charactors 
+likhte ayege. increse the size of i/p filed.
+maxlength: it will count your charector jada hogye to error deta he.
+title atribute: ye user ko i/p box me kya file karna he ye batata he
+ex: telephone me 123-45-678 ye patten follow karna he
+midal name me only 5 characters wite kar sakte he.
+min and max aatribute: minimum kite no. dalne he or maximum kite no. dalne he.
+autofocus atribute:jabhi ap page loade karoge or apne abhi kisibhi input filed
+par click nahi kiya he autofocuse atribute apply karne ke bad wo focus dikhta he.
+ise multiple times use nahi karte ata kyo ki akhi time pe do filed focus nahi 
+hoti. ex: datetime-local
+requied atribute: jis field ko apne requred atribute lagya he usme value denihi padegi.
+use empty nahi submit karsakte(usne please filed the this yesa messege ata he.)
+ex: last name
+rgexs: ye patten me lagte he for ex: fathers name and mobile no., 
+ham google par sarch karke regex nikal sakte he. patten atribute is use to validate your data.
+step atribute: ex: number, means jobhi ham data likege wo multiple of 5 hona chye.
+ height and width atribute: ham input keliye heigth and width nahi use karte.
+ye image type ke liye use hota he ise ham use nahi karte jobhi image apload karna hoaga
+to file atributed ka use karte he.
+autocomplete atribute : jobhi ham no. ya nam box me fill karte he usapar click karne 
+par hame option me dikhte he. wo dikhana chye ya hi to use on off kar sakte he.
+ex: fathers-->
+
+<!--form tag: ham ne dekha ki form me inpute tag, lable tage, is me or ham dropdown add kar sakte he. dropdown add karne keliy 
+two tages use karte he. that is select tag, option tag . in select tag we can use multiple
+option tags. defolt select karne ke bad maharashtra.
+size: se ham iski size set kar sakte he
+multiple: se ham multiple option select kar sakte(ctrl key press kar ke)
+slected: se ham defolt state/villege select kar kaste he.
+
+textarea:address likhne keliye iska use hota ha. iski hieght and width resizable hoati he.
+ there is two atributes for textarea i.e cols(colums)and rows it will give the height and width of 
+you text. strating ke kite size ka dikhe ga ise badme ham sized kamjada kar sakte he.
+-->
+
+<!--legent tag is use for sed to define the title for the child
+    contents. combinely input tag ko heading deneke liye use hota 
+he. ex: personal details
+
+datalist: isme se ap ko sajestion milege par wo dalne compalsory nahi he 
+ap kuchhbhi dal sakte ho 
+
+fieldset tag : is se ham input tag ki grouping kar sakte ke 
+vox bantahe.-->
+
+
+
+
+<!--frontend:html user ko dikhta he to wo frontend
+jo chij userse clalint se interact hoti he. jo ham ne abhi
+validetions dalehe use hamne check kiya(mim,max,patten,etc)
+this is called claint set validation mah ye angular se dekh sakte he.
+ server side validation: jab user ne form submite kardiya tab jo data 
+check kiya jatha he use server side validation.
+abhi ham frontend /claint said validtion kar rahe he.-->
+
+<!--onclick and ondouble : are events use in button-->
+</body>
+</html>

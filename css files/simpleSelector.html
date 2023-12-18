@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        h1{
+            color: rgb(219, 219, 91);
+            background-color: rgb(168, 240, 240);
+        }
+        p{
+            font: size 30px;
+            color: blueviolet;
+        }
+        h2{
+            color: rgb(11, 11, 114);
+        }
+        #sample{
+            background-color: azure;
+        }
+        .para{
+            font-family:Impact, Haettenschweiler,'Arial Narrow Bold', sans-serif ;
+        }
+        .head{
+            color: rgb(160, 94, 8);
+        }
+    h3.head{
+        background-color: rgb(37, 236, 71);
+    }
+    h4,h5{
+        background-color: rgb(235, 178, 114);
+    }
+    *{
+        text-align: center;
+        background-color: rgb(217, 230, 168);
+    }
+    </style>
+</head>
+<body>
+    <h1>simple selctors</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur magnam perspiciatis, tempore illo suscipit debitis nisi, voluptatum delectus quis molestias, non hic quos praesentium. Ali
+        quid incidunt dolorum adipisci natus error.</p>
+    <h2 id="sample">simple selector: id</h2>
+    <p class="para">paragraph 1</p>
+    <p class="para">paragraph 2</p>
+    <p class="para">paragraph 3</p>
+    <p class="para">paragraph 4</p>
+    <h3 class="head">Heading 3</h3>
+    <h4 class="head">Heading 4</h4>
+    <h5 class="head">Heading 5</h5>
+</body>
+</html>
+<!--simple selector: there is four types of 
+simple selctors.
+
+(1)element selector: element means tag ko use kar ke css
+apply karte ho. ex: h1,pragharph tag etc.
+<style>
+        h1{
+            color: rgb(219, 219, 91);
+            background-color: rgb(168, 240, 240);
+        }
+    </style>
+    yaha par jo h1 tag he wo as a slector use kiya he.
+
+(2)id selector:id="sample" here sample is the value of 
+id wo kabhibi repited nahi honi chaye.
+id ko jabhi as a selector likhte he to (#)hash is symbole
+ka use kare. ex: h2 is id selector is use.
+
+(3)class selector : class attribute ki value same rahskti ye
+ex:phragrph 1,2,3,4 class="para".
+jese id jo samjnekeliye # lagta he wese class ko samj nekeliye(.)dot
+lagta he.
+
+we can apply some combination also : ex: h3,h4,h5 in me pahale sablo
+color diya yahapar sabka class="head" he. agr hame sirf h3 ko background
+color dena hoga to ham uske liye(h3.head)ye use kare ge. this is the combination
+of element and class selector.
+Agar muje h4,h5 ko same background color denahe to (h4,h5{
+    bacground-color : aqua })is tarh likhe.
+
+(4)universal selector:body section ke sabhi tag ko styleing apply karnihe to
+universal selector use kar te he.
+iskeliye (*) ka use kiya jata he.jab ham universal selector apply
+kar te to ye body section ke har tag ko apply hota he.
+ex:*{
+        text-align: center;
+        background-color:corali;
+    }
+pahale ye text left side par the ye apply kar ne par center me agya.
+background color sabhi ko apply hogya.
