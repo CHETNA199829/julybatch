@@ -1,1 +1,33 @@
 <p>{{data}}</p>
+<div>{{amount}}</div>
+
+<!--we can pass fun to the interpolation-->
+<div>{{test()}}</div>
+
+<!-- assigment is not possible with interpolation
+  -->
+
+  <!-- <div>{{schoolName = "holy cross school"}}<div> -->
+
+    <!-- we can use equality operator with interpolation-->
+<!-- <div>{{amount == "900000"}}</div>  oveerapling of datatype of no. and string datatype error -->
+<div>{{amount === 9000000}}</div>
+<!-- =     : assignment operator : to assign value to the varible/property.
+==  : equality operator : it will compared only value.
+=== : it compres value as will as data type.
+ -->
+
+ <div>{{90*7}}</div>
+ <div>{{amount*7}}</div>
+ <P>{{isMatch}}</P>
+ <P>{{!isMatch}}</P>
+ <P>{{x+x}}</P>
+ <!-- <P>{{x++}}</P>
+ <P>{{x--}}</P> 
+ incriment and decriment is not allowed-->
+
+ <input type="text" [value]="name">Enter Name
+
+
+
+

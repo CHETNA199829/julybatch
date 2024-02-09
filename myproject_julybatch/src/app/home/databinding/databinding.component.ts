@@ -18,4 +18,13 @@ export class DatabindingComponent {
 
 
 data : any = "we are learning string interpolation";
+amount :number = 9000000;
+schoolName! : string;
+isMatch=true;
+x=7;
+name ="poonam";
+test(){
+  return 50*2;
+}
+
 }
