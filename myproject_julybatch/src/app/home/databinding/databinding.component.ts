@@ -23,8 +23,13 @@ schoolName! : string;
 isMatch=true;
 x=7;
 name ="poonam";
+clickEventData:any;
+city:any = "satara";
 test(){
   return 50*2;
+}
+clickEvent(){
+  this.clickEventData = "9334739457"
 }
 
 }
