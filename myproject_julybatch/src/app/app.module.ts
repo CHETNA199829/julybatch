@@ -8,6 +8,7 @@ import { LoginComponent } from './home/login/login.component';
 import { SigUpComponent } from './home/sig-up/sig-up.component';
 import { DatabindingComponent } from './home/databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     SigUpComponent,
     DatabindingComponent,
+    DirectivesComponent,
     
   ],
   imports: [

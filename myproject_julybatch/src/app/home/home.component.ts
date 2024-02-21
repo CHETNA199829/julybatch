@@ -32,4 +32,7 @@ export class HomeComponent {      //component class : properties, costructor,lif
     console.log("test calling...");
     
   }
+  directives(){
+    this.router.navigateByUrl('directives')
+  }
 }
