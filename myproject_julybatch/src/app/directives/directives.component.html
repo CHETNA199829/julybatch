@@ -15,6 +15,17 @@
 <br>
 <button (click)="toggle()">toggle</button>
 
+<div [ngSwitch]="fruit">
+<div *ngSwitchCase="'mango'">my fav fruit is mango
+</div>
+<div *ngSwitchCase="'pinapple'">my fav fruit is pinapple
+</div>
+<div *ngSwitchCase="'pappaya'">my fav fruit is pappaya
+</div>
+
+
+</div>
+
 
 
 

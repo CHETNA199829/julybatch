@@ -30,8 +30,13 @@ city ="pune"
 // isShow = "45437549";
 // isShow = null;
 // isShow = undefined;
+
 cars = ["i10","i20","swift","jaguar"]
 showDiv = true;
+// fruit="mango";
+fruit="pappaya";
+
+
 toggle(){
 // this.showDiv= false;
 this.showDiv = !this.showDiv;
