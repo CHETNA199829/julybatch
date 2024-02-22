@@ -24,8 +24,18 @@ export class DirectivesComponent {
 // ngStyle Directive: The ngStyle directive facilitates you to modify the style of an HTML element using the expression. You can also use ngStyle directive to dynamically change the style of your HTML element.
 
 city ="pune"
-// isShow = true;
-isShow = false;
+ isShow = true;
+// isShow = false;
+// isShow = 45437549; //null or  undefined or false for this three case it will give  false.
+// isShow = "45437549";
+// isShow = null;
+// isShow = undefined;
+cars = ["i10","i20","swift","jaguar"]
+showDiv = true;
+toggle(){
+// this.showDiv= false;
+this.showDiv = !this.showDiv;
+}
 
 }
 
