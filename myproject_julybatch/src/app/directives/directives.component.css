@@ -5,5 +5,23 @@
     width: 100px;
 }
 
+.info{
+    color: aqua;
+    border: 1px solid blue;
+}
 
-
+.adminUser{
+    background-color: rgb(28, 201, 57);
+    height: 100px;
+    width: 100px;
+}
+.mentorUser{
+    background-color: rgb(228, 23, 74);
+    height: 100px;
+    width: 100px;
+}
+.studentUser{
+    background-color: rgb(58, 197, 231);
+    height: 100px;
+    width: 100px;
+}

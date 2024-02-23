@@ -1,30 +1,52 @@
 <p>directives works!</p>
 <div *ngIf="isShow">
-    <p>{{city}}</p>
+  <p>{{ city }}</p>
 </div>
 
-<div>{{cars}}</div>
+<div>{{ cars }}</div>
 
 <div *ngFor="let carName of cars">
-{{carName}}
+  {{ carName }}
 </div>
-<br>
+<br />
 
-<div class="div-container" *ngIf="showDiv">
-</div>
-<br>
+<div class="div-container" *ngIf="showDiv"></div>
+<br />
 <button (click)="toggle()">toggle</button>
 
 <div [ngSwitch]="fruit">
-<div *ngSwitchCase="'mango'">my fav fruit is mango
+  <div *ngSwitchCase="'mango'">my fav fruit is mango</div>
+  <div *ngSwitchCase="'pinapple'">my fav fruit is pinapple</div>
+  <div *ngSwitchCase="'pappaya'">my fav fruit is pappaya</div>
 </div>
-<div *ngSwitchCase="'pinapple'">my fav fruit is pinapple
+<br>
+<!-- <div class="info">I like pune</div> -->
+<div class="info adminUser">I like pune</div>
+<br>
+<div
+  [ngClass]="{
+    adminUser: user == 'Admin',
+    mentorUser: user == 'mentor',
+    studentUser: user == 'student'
+  }"
+>
+  welcome to app
 </div>
-<div *ngSwitchCase="'pappaya'">my fav fruit is pappaya
+<br>
+<!-- or -->
+<div [class.adminUser]="user == 'Admin'"
+     [class.mentorUser]="user == 'mentor'"                     
+     [class.studentUser]="user == 'student'">
+    welCome
 </div>
 
-
+<div style="color: black;">
+welcome Amravati
 </div>
+
+<div [ngStyle]= "user == 'Admin' ? {'background-color': 'yellow'} : {'background-color': 'black'}">
+    welcome Amravati
+    </div>
 
 
 
