@@ -5,13 +5,15 @@ import { LoginComponent } from './home/login/login.component';
 import { SigUpComponent } from './home/sig-up/sig-up.component';
 import { DatabindingComponent } from './home/databinding/databinding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { LifecyclehooksComponent } from './home/lifecyclehooks/lifecyclehooks.component';
 
 const routes: Routes = [
   { path : '' , component : HomeComponent},
 { path : "login" , component : LoginComponent},
 {path : "sigUp", component : SigUpComponent},
 {path : "dataBinding", component : DatabindingComponent},
-{path : "directives",component:DirectivesComponent}
+{path : "directives",component:DirectivesComponent},
+{path : "lifecyclehooks", component: LifecyclehooksComponent}
 ];
 
 @NgModule({

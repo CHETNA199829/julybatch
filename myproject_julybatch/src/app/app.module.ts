@@ -9,6 +9,7 @@ import { SigUpComponent } from './home/sig-up/sig-up.component';
 import { DatabindingComponent } from './home/databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
+import { LifecyclehooksComponent } from './home/lifecyclehooks/lifecyclehooks.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { DirectivesComponent } from './directives/directives.component';
     SigUpComponent,
     DatabindingComponent,
     DirectivesComponent,
+    LifecyclehooksComponent,
     
   ],
   imports: [
