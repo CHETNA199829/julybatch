@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-databinding',
@@ -25,6 +27,11 @@ x=7;
 name ="poonam";
 clickEventData:any;
 city:any = "satara";
+
+constructor(private dataService : DataService, private router : Router){}
+
+
+
 test(){
   return 50*2;
 }
@@ -32,4 +39,8 @@ clickEvent(){
   this.clickEventData = "9334739457"
 }
 
+assingVal(){
+this.dataService.userName = "Ajye";
+this.router.navigateByUrl('lifecyclehooks')
+}
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-directives',
@@ -7,9 +8,22 @@ import { Component } from '@angular/core';
 })
 export class DirectivesComponent {
 // user:string="Admin";
-// user:string="mentor";
-user:string="student";
+// user:string = "mentor";
+ user:string= "student";
+city ="pune"
+ isShow = true;
+// isShow = false;
+// isShow = 45437549; //null or  undefined or false for this three case it will give  false.
+// isShow = "45437549";
+// isShow = null;
+// isShow = undefined;
 
+cars = ["i10","i20","swift","jaguar"];
+showDiv = true;
+// fruit="mango";
+fruit="pappaya";
+
+constructor(private dataService : DataService){}
 
 
 
@@ -28,25 +42,16 @@ user:string="student";
 // ngClass Directive: The ngClass directive is used to add or remove CSS classes to an HTML element.
 // ngStyle Directive: The ngStyle directive facilitates you to modify the style of an HTML element using the expression. You can also use ngStyle directive to dynamically change the style of your HTML element.
 
-city ="pune"
- isShow = true;
-// isShow = false;
-// isShow = 45437549; //null or  undefined or false for this three case it will give  false.
-// isShow = "45437549";
-// isShow = null;
-// isShow = undefined;
-
-cars = ["i10","i20","swift","jaguar"]
-showDiv = true;
-// fruit="mango";
-fruit="pappaya";
-
-
 toggle(){
 // this.showDiv= false;
 this.showDiv = !this.showDiv;
 }
 
+getData(){
+this.user = this.dataService.userName;
+console.log("username", this.user);
+
+}
 }
 
 

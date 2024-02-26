@@ -6,6 +6,8 @@ import { SigUpComponent } from './home/sig-up/sig-up.component';
 import { DatabindingComponent } from './home/databinding/databinding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { LifecyclehooksComponent } from './home/lifecyclehooks/lifecyclehooks.component';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   { path : '' , component : HomeComponent},
@@ -13,7 +15,9 @@ const routes: Routes = [
 {path : "sigUp", component : SigUpComponent},
 {path : "dataBinding", component : DatabindingComponent},
 {path : "directives",component:DirectivesComponent},
-{path : "lifecyclehooks", component: LifecyclehooksComponent}
+{path : "lifecyclehooks", component: LifecyclehooksComponent},
+{path : "Parent", component: ParentComponent},
+{path : "child", component: ChildComponent}
 ];
 
 @NgModule({

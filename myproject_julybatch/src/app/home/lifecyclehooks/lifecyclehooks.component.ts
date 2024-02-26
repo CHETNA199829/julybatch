@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-lifecyclehooks',
@@ -10,7 +11,7 @@ export class LifecyclehooksComponent {
 name:any;
 // @Input() surName:any; //input property
 
-constructor(){
+constructor(private dataService : DataService){
   console.log("constructor calling..");
 }
 
@@ -25,8 +26,11 @@ constructor(){
 //ngAfterContentChecked():
 //ngAfterViewChecked():
 //ngAfterViewInit() :
-
+ngOnchange(){
+  console.log("onchange calling");
+}
 ngOnInit(){
+  this.name = this.dataService.userName;
   console.log("oninit calling");
 }
 ngDocheck(){

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Route, Router } from '@angular/router'; //import section
+import { DataService } from '../data.service';
 
 @Component({            //it is called component directive: meta data of component
   selector: 'app-home',
@@ -16,8 +17,17 @@ export class HomeComponent {      //component class : properties, costructor,lif
          name3 : any;
 
   
-  constructor(private router: Router){} // constructor section
+  constructor(private router: Router,private dataService : DataService){} // constructor section
   
+ngOnInit(){
+  this.dataService.userName = this.name;
+  console.log("set",this.dataService.userName);
+  
+}
+
+
+
+
   //LH(lifecyle hooks), methods
   singUpcompo(){
 
