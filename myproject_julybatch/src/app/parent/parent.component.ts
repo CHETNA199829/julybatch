@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class ParentComponent {
 city = "Mumbai";
 state:any;
+sName!:string;
 
 dataFromChild(event:any){
 console.log(event);

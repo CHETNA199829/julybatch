@@ -9,7 +9,7 @@ import { DataService } from 'src/app/data.service';
 export class LifecyclehooksComponent {
 
 name:any;
-// @Input() surName:any; //input property
+ @Input() surName:any; //input property
 
 constructor(private dataService : DataService){
   console.log("constructor calling..");
@@ -18,7 +18,7 @@ constructor(private dataService : DataService){
 
 //A component instance has a lifecycle that starts
 // when Angular instantiates the component class and renders the component view and its child views.
-//ngOnchange() : if componet is having @input bound property then ngOnchnage life cycle hook get triger first
+//ngOnChange() : if componet is having @input bound property then ngOnchnage life cycle hook get triger first
 //ngOnInit() :
 //ngDochec():
 //ngAfterContentInit():
@@ -26,7 +26,7 @@ constructor(private dataService : DataService){
 //ngAfterContentChecked():
 //ngAfterViewChecked():
 //ngAfterViewInit() :
-ngOnchange(){
+ngOnChanges(){
   console.log("onchange calling");
 }
 ngOnInit(){
