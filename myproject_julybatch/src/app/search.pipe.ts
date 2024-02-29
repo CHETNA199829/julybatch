@@ -5,10 +5,18 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SearchPipe implements PipeTransform {
 
-  transform(value: any, searchText: any[]): any {
+  transform(value: any, searchText: any): any {
     console.log("pipe calling....");
     
-    return null;
+    // return null;
+    let text = searchText?.toLowerCase();
+    console.log(text);
+     return value.filter((ele:any)=>{
+      return JSON.stringify(ele).toLowerCase().includes(text)
+
+  })
+
+    
   }
 
 
