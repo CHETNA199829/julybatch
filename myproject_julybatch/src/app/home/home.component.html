@@ -5,9 +5,18 @@
  <button routerlink = "/login" class="btn">Login</button>
 <button (click)="singUpcompo()"class="btn">Sig Up</button>
 <button routerLink="/dataBinding"class="btn">Data binding</button>
-<button (click)="directives()"class="btn">Directives</button>
+<button (click)="directives()"class="btn">pipe</button>
 <button routerLink="lifecyclehooks" class="btn">lifecyclehooks</button>
 <button routerLink="Parent" class="btn">parent</button>
-<button routerLink="subject" class="btn">Subject</button>
+<button (click)="purePipes()">pure pipe</button>
+</div>
+<br><br><br>
+
+<div *ngIf="pipes">
+    <!-- {{name | uppercase}} -->
+    <!-- {{name | lowercase}} -->
+    {{name | titlecase}}
+    <!-- {{date | date:'medium'}} -->
+    {{date1 | date:'medium'}}
 </div>
 </div>

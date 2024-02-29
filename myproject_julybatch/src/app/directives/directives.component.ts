@@ -18,10 +18,26 @@ city ="pune"
 // isShow = null;
 // isShow = undefined;
 
+searchText:any;
 cars = ["i10","i20","swift","jaguar"];
 showDiv = true;
 // fruit="mango";
 fruit="pappaya";
+tableHeading = ["Nmae","Contact","city","age"];
+tableData = [
+  {name:"pooja",contact:9374380384,City:"pune",age:20},
+  {name:"om",contact:9374380384,City:"pune",age:20},
+  {name:"jay",contact:9374380384,City:"pune",age:20},
+  {name:"Nitin",contact:9374380384,City:"pune",age:20},
+  {name:"Rakesh",contact:9374380384,City:"pune",age:20},
+  {name:"Shiv",contact:9374380384,City:"pune",age:20},
+  {name:"Prajakta",contact:9374380384,City:"pune",age:20},
+  {name:"chetna",contact:9374380384,City:"pune",age:20},
+  {name:"Rohit",contact:9374380384,City:"pune",age:20},
+  {name:"Akash",contact:9374380384,City:"pune",age:20},
+  {name:"vinu",contact:9374380384,City:"pune",age:20},
+
+]
 
 constructor(private dataService : DataService){}
 

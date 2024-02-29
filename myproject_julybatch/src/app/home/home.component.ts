@@ -12,9 +12,12 @@ export class HomeComponent {      //component class : properties, costructor,lif
          //let/var/const city = "pune"   variable (declaration + definition) in js
          city : string = "pune";   //property    
          surName : any ="988080" ;
-         name : string ="poonam";
+         name : string ="poonam patil";
          name2! : string;
          name3 : any;
+         pipes: boolean=false;
+         date = "10/2/2023";
+         date1 = new Date();
 
   
   constructor(private router: Router,private dataService : DataService){} // constructor section
@@ -44,5 +47,9 @@ ngOnInit(){
   }
   directives(){
     this.router.navigateByUrl('directives')
+  }
+
+  purePipes(){
+    this.pipes =true;
   }
 }

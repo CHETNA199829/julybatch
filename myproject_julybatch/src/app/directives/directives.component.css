@@ -25,3 +25,20 @@
     height: 100px;
     width: 100px;
 }
+
+tr,td,th,table{
+    border: 2px solid rgb(255, 125, 3);
+    background-color: rgb(218, 218, 102);
+    border-collapse: collapse;
+    margin:auto ;
+    text-align: center;
+    padding: 5px 5px;
+
+}
+.table-cont{
+    margin:auto ;
+    text-align: center;
+    padding: 5px 5px;
+}
+
+
