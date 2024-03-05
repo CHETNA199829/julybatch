@@ -9,7 +9,7 @@ import { DataService } from '../data.service';
 export class Sub2Component {
 
 
-  data2:any;
+data2:any;
 constructor(private dataService : DataService){}
 
 ngOnInit(){
