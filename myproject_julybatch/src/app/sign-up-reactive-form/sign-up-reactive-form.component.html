@@ -1,9 +1,11 @@
 <p>sign-up-reactive-form works!</p>
 <div>
-    <form [formGroup]="signUpForm">
-        <label>Name</label><br>
+
+    <form [formGroup]="signUpForm" class="form.container">
+        <label>Name</label> <br>
         <input type="text" formControlName="name"><br>
-        <span class="err" *ngIf="signUpForm.get('name')?.hasError('required') && signUpForm.get('name')?.touched">name is requried</span><br>
+        <span class="err" *ngIf="signUpForm.get('name')?.hasError('required') 
+        && signUpForm.get('name')?.touched">name is requried</span><br>
         
         <label>Mob no.</label><br>
         <input type="text" formControlName="mobile"><br>
@@ -17,12 +19,17 @@
          <label>Email</label><br>
          <input type="text" fromContorlName="email"><br>
          
-         <label>Password</label><br>
-         <input type="text" fromContorlName="pass"><br>
+         <label>Password</label><br>    
+         <input [type]="showPassword ? 'text' : 'password'" fromContorlName="pass">
+         <i *ngIf="show" (click)="toShowPassword()" class="bi bi-eye-fill eye-fill2 "></i>
+        <i *ngIf="!show" (click)="toShowPassword()" class="bi bi-eye-slash-fill eye-slash-fill2"></i>
+         <br><br>
         
-         <label>Conform Password</label><br>
-         <input type="text" fromContorlName="confpass"><br>
          
+         <label>Conform Password</label><br>
+         <input type="text" fromContorlName="confpass"><i class="bi bi-eye-slash-fill"></i><br>
+         <br><br>
+
          <button (click)="submit()">Submit</button>
 
     </form>
