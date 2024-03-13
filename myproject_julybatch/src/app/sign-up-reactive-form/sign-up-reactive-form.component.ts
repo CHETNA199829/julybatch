@@ -24,10 +24,28 @@ formLoad(){
     pancard : ['',[Validators.pattern('^[A-Z]{5}[0-9]{4}[A-Z]{1}$'),Validators.maxLength(10)]],
     email : [''],
     pass : [''],
-    confpass : ['']
+    confpass : [''],
+    city:["",[this.spacesNotAllowed]]
 
   })
 }
+
+spacesNotAllowed(control:any){
+
+  const value =control.value;
+  console.log("value",value);
+  //check if the value contains consecutive spaces
+  let isIncludeSpace = /\s{2,}/.test(value)
+  return isIncludeSpace ? { spacesNotAllowed: true} : null;
+ 
+ // console.log("isIncludeSpacea",isIncludeSpace);
+  
+ //value.toLowercase().incluees("clone") // to show err when clone word get enterd
+  
+}
+
+
+
 submit(){
   console.log(this.signUpForm.value);
   

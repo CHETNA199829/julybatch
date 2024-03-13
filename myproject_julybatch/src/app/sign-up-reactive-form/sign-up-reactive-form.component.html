@@ -29,6 +29,13 @@
          <label>Conform Password</label><br>
          <input type="text" fromContorlName="confpass"><i class="bi bi-eye-slash-fill"></i><br>
          <br><br>
+         <label >city</label>
+         <input type="text" fromContorlName="city">
+         <br>
+         <div class="err" *ngIf="signUpForm.get('city')?.hasError('spacesNotAllowed')">
+            Please remove spaces more than one space is not allow</div>
+         
+         <br>
 
          <button (click)="submit()">Submit</button>
 
