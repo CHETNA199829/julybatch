@@ -21,16 +21,18 @@
          
          <label>Password</label><br>    
          <input [type]="showPassword ? 'text' : 'password'" fromContorlName="pass">
+         <!-- (keyup)="passwordMatchValidator()" -->
          <i *ngIf="show" (click)="toShowPassword()" class="bi bi-eye-fill eye-fill2 "></i>
          <i *ngIf="!show" (click)="toShowPassword()" class="bi bi-eye-slash-fill eye-slash-fill2"></i>
-         <!-- <div class="err" *ngIf="signUpForm.get('pass')?.hasError('passswordNotMatch')">
-            password and confirm password not matched
-         </div> -->
+         <div *ngIf="misMatch" class="err">
+            password and confirm password not match.</div>
+         
         <br>
         
          
          <label>Conform Password</label><br>
-         <input type="text" fromContorlName="confpass" minlength="5" maxlength="5"><br>
+         <input type="text" fromContorlName="confpass" minlength="5" maxlength="5"
+         (keyup)="passwordMatchValidator()">
          <div *ngIf="misMatch" class="err">
              password and confirm password not match.</div>
          <br><br>

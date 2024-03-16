@@ -13,6 +13,7 @@ import { Sub1Component } from './sub1/sub1.component';
 import { Sub2Component } from './sub2/sub2.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { SignUpReactiveFormComponent } from './sign-up-reactive-form/sign-up-reactive-form.component';
+import { Viewchild1Component } from './viewchild1/viewchild1.component';
 
 const routes: Routes = [
   { path : '' , component : HomeComponent},
@@ -27,7 +28,9 @@ const routes: Routes = [
 {path : "subject1", component:Sub1Component },
 {path : "subject2", component:Sub2Component },
 {path : "templateForm", component:TemplatedrivenComponent},
-{path : 'signUpForm', component:SignUpReactiveFormComponent}
+{path : 'signUpForm', component:SignUpReactiveFormComponent},
+{path : 'viewChild1', component:Viewchild1Component},
+{path : 'admin', loadChildren:()=>import('./admin/admin.module').then(m=>m.AdminModule)}
 ];
 
 @NgModule({

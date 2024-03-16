@@ -19,6 +19,9 @@ import { SearchPipe } from './search.pipe';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { SignUpReactiveFormComponent } from './sign-up-reactive-form/sign-up-reactive-form.component';
 import { NumbersOnlyDirective } from './numbers-only.directive';
+import { Viewchild1Component } from './viewchild1/viewchild1.component';
+import { Viewchild2Component } from './viewchild2/viewchild2.component';
+console.log("modulde calling...");
 
 
 
@@ -40,6 +43,8 @@ import { NumbersOnlyDirective } from './numbers-only.directive';
     TemplatedrivenComponent,
     SignUpReactiveFormComponent,
     NumbersOnlyDirective,
+    Viewchild1Component,
+    Viewchild2Component,
     
     
   ],

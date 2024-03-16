@@ -11,6 +11,8 @@ signUpForm! : FormGroup;
 show:boolean=false;
 // show:boolean=true;
 showPassword :boolean=false;
+misMatch:boolean=false;
+ 
 
 constructor(private formBuilder: FormBuilder){}
 
@@ -23,8 +25,8 @@ formLoad(){
     mobile : ['',[Validators.maxLength(10)]],
     pancard : ['',[Validators.pattern('^[A-Z]{5}[0-9]{4}[A-Z]{1}$'),Validators.maxLength(10)]],
     email : [''],
-    pass : [''],
-    confpass : [''],
+    pass : ['',[this.passwordMatchValidator]],
+    confpass : ['',[this.confirmPasswordMatch]],
     city:["",[this.spacesNotAllowed]]
 
   })
@@ -43,8 +45,22 @@ spacesNotAllowed(control:any){
  //value.toLowercase().incluees("clone") // to show err when clone word get enterd
   
 }
+passwordMatchValidator(){
+  const password = this.signUpForm.get('pass')?.value;
+  const confirmPassword = this.signUpForm.get('confpass')?.value;
+  
+  if(password != confirmPassword){
+    this.misMatch= true ;
+}else{
+this.misMatch= false ;
+}
+  
+ 
+}
 
-
+confirmPasswordMatch(){
+  
+}
 
 submit(){
   console.log(this.signUpForm.value);
