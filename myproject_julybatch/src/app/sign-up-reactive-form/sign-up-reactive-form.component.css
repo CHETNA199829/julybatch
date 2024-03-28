@@ -1,9 +1,9 @@
 
-.err{
+ .err{
     color: red;
 }
 
-.form.container{
+.form-container{
     height: 500px;
     background-color: bisque;
     border: 3px solid blueviolet;

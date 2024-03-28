@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Router, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './home/login/login.component';
 import { SigUpComponent } from './home/sig-up/sig-up.component';
@@ -16,7 +16,9 @@ import { SignUpReactiveFormComponent } from './sign-up-reactive-form/sign-up-rea
 import { Viewchild1Component } from './viewchild1/viewchild1.component';
 
 const routes: Routes = [
-  { path : '' , component : HomeComponent},
+  
+{ path : '' , component : HomeComponent},
+{ path : 'home' , component : HomeComponent},
 { path : "login" , component : LoginComponent},
 {path : "sigUp", component : SigUpComponent},
 {path : "dataBinding", component : DatabindingComponent},

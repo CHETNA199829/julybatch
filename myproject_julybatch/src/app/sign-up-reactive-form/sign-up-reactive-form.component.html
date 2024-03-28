@@ -1,7 +1,7 @@
 <p>sign-up-reactive-form works!</p>
 <div>
 
-    <form [formGroup]="signUpForm" class="form.container">
+    <form [formGroup]="signUpForm" class="form-container">
         <label>Name</label> <br>
         <input type="text" formControlName="name" maxlength="10"><br>
         <span class="err" *ngIf="signUpForm.get('name')?.hasError('required') 
@@ -12,33 +12,41 @@
         <span class="err" *ngIf="signUpForm.get('mobile')?.hasError('maxlength')">maximum 10 no. are allowed</span><br>
         
         <label>Pancard No.</label><br>
-         <input type="text" fromContorlName="pancard"><br>
+         <input type="text" formControlName="pancard"><br>
          <span class="err" *ngIf="signUpForm.get('pancard')?.hasError('pattern') && !signUpForm.get('pancard')?.hasError('maxlength')">invalid pan number</span>
          <span class="err" *ngIf="signUpForm.get('pancard')?.hasError('maxlength')">maxlength is 10</span><br>
         
          <label>Email</label><br>
-         <input type="text" fromContorlName="email"><br>
+         <input type="text" formControlName="email"><br>
          
-         <label>Password</label><br>    
-         <input [type]="showPassword ? 'text' : 'password'" fromContorlName="pass">
-         <!-- (keyup)="passwordMatchValidator()" -->
-         <i *ngIf="show" (click)="toShowPassword()" class="bi bi-eye-fill eye-fill2 "></i>
+         <!-- <label>Password</label><br>    
+         <input [type]="showPassword ? 'text' : 'password'" formContorlName="pass">
+         (keyup)="passwordMatchValidator()" -->
+          <!-- <i *ngIf="show" (click)="toShowPassword()" class="bi bi-eye-fill eye-fill2 "></i>
          <i *ngIf="!show" (click)="toShowPassword()" class="bi bi-eye-slash-fill eye-slash-fill2"></i>
          <div *ngIf="misMatch" class="err">
             password and confirm password not match.</div>
-         
+          -->
+
+          <label>Password</label><br>    
+<input [type]="showPassword ? 'text' : 'password'" formControlName="pass">
+<!-- (keyup)="passwordMatchValidator()" -->
+<i *ngIf="show" (click)="toShowPassword()" class="bi bi-eye-fill eye-fill2"></i>
+<i *ngIf="!show" (click)="toShowPassword()" class="bi bi-eye-slash-fill eye-slash-fill2"></i>
+<div *ngIf="misMatch" class="err">Password and confirm password do not match.</div>
+
         <br>
         
          
          <label>Conform Password</label><br>
-         <input type="text" fromContorlName="confpass" minlength="5" maxlength="5"
+         <input type="text" formControlName="confpass" minlength="5" maxlength="5"
          (keyup)="passwordMatchValidator()">
          <div *ngIf="misMatch" class="err">
              password and confirm password not match.</div>
          <br><br>
 
-         <label >city</label>
-         <input type="text" fromContorlName="city">
+         <label >city</label><br>
+         <input type="text" formControlName="city">
          <br>
          <div class="err" *ngIf="signUpForm.get('city')?.hasError('spacesNotAllowed')">
             Please remove spaces more than one space is not allow</div>

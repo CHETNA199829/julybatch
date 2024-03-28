@@ -1,5 +1,9 @@
+
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +25,7 @@ import { SignUpReactiveFormComponent } from './sign-up-reactive-form/sign-up-rea
 import { NumbersOnlyDirective } from './numbers-only.directive';
 import { Viewchild1Component } from './viewchild1/viewchild1.component';
 import { Viewchild2Component } from './viewchild2/viewchild2.component';
+import { HttpClientModule } from '@angular/common/http';
 console.log("modulde calling...");
 
 
@@ -52,7 +57,9 @@ console.log("modulde calling...");
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule, //step no. 1
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
